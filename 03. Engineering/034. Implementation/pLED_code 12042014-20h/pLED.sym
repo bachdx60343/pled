@@ -1,0 +1,206 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+015     CCP_1
+015     CCP_1_LOW
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     @INTERRUPT_AREA
+021     @INTERRUPT_AREA
+022     @INTERRUPT_AREA
+023     @INTERRUPT_AREA
+024     @INTERRUPT_AREA
+025     @INTERRUPT_AREA
+026     @INTERRUPT_AREA
+027     @INTERRUPT_AREA
+028-02D rgb_bits
+02E     @TRIS_C
+02F     timer1_overflow
+030-033 sigHall_timer
+034     port_b
+035     last_b
+036     cycle_trigger
+037     section_trigger
+038     section_count
+039-03A section_timer
+03B     tuning
+03C     mode
+03D     day
+03E     month
+03F     year
+040     dow
+041     hour
+042     min
+043     sec
+044     tick
+045     digit_sec
+046     h_high
+047     h_low
+048     m_high
+049     m_low
+04A     anal_hour
+04B     day_h
+04C     day_l
+04D     month_h
+04E     month_l
+04F     ast_count
+050     pled_position
+051     pled_direction
+052     pled_count
+053     pled_on
+054     latch_ClearAll.i
+054     fetch_data.pos
+054     ds1307_init.byte0
+054-055 latch_write.blue
+054-057 @DIV3232.P1
+054     ds1307_get_date.@SCRATCH1
+054     ds1307_get_time.@SCRATCH1
+054     MAIN.@SCRATCH1
+055     @DIV88.P1
+055     @MUL88.P2
+055     MAIN.@SCRATCH2
+055     fetch_data.@SCRATCH1
+056     @MUL88.P1
+056-057 latch_write.red
+056     @DIV88.P1
+057     @DIV88.@SCRATCH1
+058-059 latch_write.green
+058     @I2C_READ_2.P1
+058     @I2C_WRITE_2.P2
+058-05B @DIV3232.P3
+059     bcd2bin.bcd_value
+059     @I2C_READ_2.@SCRATCH1
+05A     bcd2bin.temp
+05A     latch_write.i
+05A     @I2C_READ_2.@SCRATCH2
+05B     bcd2bin.@SCRATCH1
+05C     @DIV3232.@SCRATCH1
+05D     @DIV3232.@SCRATCH2
+05E     @DIV3232.@SCRATCH3
+05F     @DIV3232.@SCRATCH4
+060     @DIV3232.@SCRATCH5
+061     RB_isr.changes
+061     CCP1_isr.@SCRATCH1
+062     CCP1_isr.@SCRATCH2
+063     CCP1_isr.@SCRATCH3
+064     CCP1_isr.@SCRATCH4
+065-068 @MUL3232.P1
+069-06C @MUL3232.P1
+06D     @MUL3232.@SCRATCH1
+06E     @MUL3232.@SCRATCH2
+06F     @MUL3232.@SCRATCH3
+070     @MUL3232.@SCRATCH4
+071     @MUL3232.@SCRATCH5
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+07B     @SCRATCH
+07F     @INTERRUPT_AREA
+0FF     @INTERRUPT_AREA
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @READ_PROGRAM_MEMORY8.P1
+10D-10E @WRITE_PROGRAM_MEMORY8.P2
+17F     @INTERRUPT_AREA
+1FF     @INTERRUPT_AREA
+27F     @INTERRUPT_AREA
+2FF     @INTERRUPT_AREA
+37F     @INTERRUPT_AREA
+3FF     @INTERRUPT_AREA
+47F     @INTERRUPT_AREA
+4FF     @INTERRUPT_AREA
+57F     @INTERRUPT_AREA
+5FF     @INTERRUPT_AREA
+67F     @INTERRUPT_AREA
+6FF     @INTERRUPT_AREA
+77F     @INTERRUPT_AREA
+7FF     @INTERRUPT_AREA
+87F     @INTERRUPT_AREA
+8FF     @INTERRUPT_AREA
+97F     @INTERRUPT_AREA
+9FF     @INTERRUPT_AREA
+A7F     @INTERRUPT_AREA
+AFF     @INTERRUPT_AREA
+B7F     @INTERRUPT_AREA
+BFF     @INTERRUPT_AREA
+C7F     @INTERRUPT_AREA
+CFF     @INTERRUPT_AREA
+D7F     @INTERRUPT_AREA
+DFF     @INTERRUPT_AREA
+E7F     @INTERRUPT_AREA
+EFF     @INTERRUPT_AREA
+F7F     @INTERRUPT_AREA
+FFF     @INTERRUPT_AREA
+
+ROM Allocation:
+000065  number_upper.call
+000069  number_upper.data
+0000A5  number_lower.call
+0000A9  number_lower.data
+0000E5  fpt.call
+0000EE  fpt.data
+000256  pled.call
+00025A  pled.data
+000278  EXT_isr
+000293  RB_isr
+0002B2  TBE_isr
+0002B6  RDA_isr
+0002BA  TIMER1_isr
+0002BF  CCP1_isr
+0002D2  @MUL3232
+000322  TIMER0_isr
+000328  var_init
+000342  @I2C_WRITE_2
+00039E  @I2C_READ_2
+0003F2  ds1307_init
+0004FC  bcd2bin
+000510  @DIV88
+000525  @MUL88
+00054A  @DIV3232
+000800  fetch_data
+001000  MAIN
+001000  @cinit1
+001020  @cinit2
+00131A  ds1307_get_date
+0013E9  ds1307_get_time
+001537  latch_write
+0015B6  latch_ClearAll
+
+Project Directory:
+    C:\Users\LongNT\Downloads\pLED_code\
+
+Project Files:
+    pLED.c                                                  [12-Apr-14 20:34  CRC=2A13955E]
+    pLED.h                                                  [12-Apr-14 19:57  CRC=22F39BCF]
+    ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h   [12-Nov-13 14:35  CRC=6CB1A611]
+    24256.c                                                 [25-Mar-14 00:31  CRC=B3A819A6]
+    74595.c                                                 [11-Apr-14 22:12  CRC=9D1B18D6]
+    ds1307.c                                                [07-Apr-14 21:56  CRC=D8B7D5CB]
+
+Source signature=BBEBB550
+
+Units:
+    pLED (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-65535
+    Opt Level:      1
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+
+Output Files:
+    XREF file:   pLED.xsym
+    Errors:      pLED.err
+    Ext Symbols: pLED.esym
+    INHX8:       pLED.hex
+    Symbols:     pLED.sym
+    List:        pLED.lst
+    Debug/COFF:  pLED.cof
+    Project:     pLED.ccspjt
+    Call Tree:   pLED.tre
+    Statistics:  pLED.STA

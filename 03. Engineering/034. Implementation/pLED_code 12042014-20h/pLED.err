@@ -1,0 +1,4 @@
+>>> Warning 202 "C:\Users\LongNT\Downloads\pLED_code\pLED.h" Line 113(13,21): Variable never used:   asterisk
+      Memory usage:   ROM=47%      RAM=16% - 24%
+      0 Errors,  1 Warnings.
+Build Successful.
