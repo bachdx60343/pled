@@ -1,0 +1,75 @@
+[PROJECT]
+Target=pLED.hex
+Processor_Text=PIC16F887
+CCSVerions=5.015
+Compiler=PCM
+CCSVersion=5.015
+Development_Mode=
+ToolSuite=CCS
+[Target Data]
+FileList=pLED.c
+BuildTool=C-COMPILER
+OptionString=+FM
+AdditionalOptionString=
+BuildRequired=1
+[Directories]
+Include=C:\Program Files (x86)\PICC\Devices\;C:\Program Files (x86)\PICC\Drivers\
+Library=
+LinkerScript=
+[C:\Users\LongNT\Downloads\pLED_code\pLED]
+Type=4
+[mru-list]
+1=pLED.c
+[Opened Files]
+1=pLED.c
+2=pLED.h
+3=24256.c
+4=74595.c
+5=ds1307.c
+6=..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
+7=test_case.c
+8=pLED.lst
+9=
+10=
+11=
+[pLED.c]
+Type=4
+Path=
+FileList=
+BuildTool=
+OptionString=
+AdditionalOptionString=
+[defines]
+enabled=0
+chip=1
+D1=
+V1=
+[fileformats]
+forcecoff=1
+debug=4
+error=2
+object=0
+list=0
+scratch=0
+sta=1
+tre=1
+allerrors=1
+allwarnings=1
+stayupne=1
+stayupoe=0
+[Windows]
+0=0000 %S 0 0 796 451 3 0
+[CompilerVersion]
+Fixed=
+[debugperif]
+selected=Analog to Digital Converter
+[debugbreak]
+count=0
+[debugwatch]
+count=0
+[debugexpr]
+expr=
+sideeffects=1
+[Units]
+Count=1
+1=pLED (main)

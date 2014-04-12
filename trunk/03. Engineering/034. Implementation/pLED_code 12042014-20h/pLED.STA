@@ -1,0 +1,77 @@
+
+ROM used:   3834/8192 (47%)
+            5604/8192 (68%) including unused fragments
+
+            2.4 Average locations per line
+            10.3 Average locations per statement
+
+RAM used:   60/368 (16%) at main() level
+            88/368 (24%) worst case
+
+Stack used: 3 worst case (2 in main + 1 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+  395   232  62  pLED.c
+  127     0   0  pLED.h
+  768     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
+   76    24   6  24256.c
+  101    44  12  74595.c
+  137    72  19  ds1307.c
+----- -----
+ 1604   372 Total
+
+Page ROM  %  RAM   Vol Diff  Functions:
+---- --- --- ---   --- ----  ----------
+0     64   2    0             @const630
+0     64   2    0             @const634
+0    369  10    0             @const638
+0     34   1    0             @const641
+ Inline         7   838  5.5  latch_write
+ Inline         1   240  3.7  latch_ClearAll
+0     84   2    3             @I2C_READ_2
+0     92   2    1  5559  9.9  @I2C_WRITE_2
+0    266   7    1   470  2.4  ds1307_init
+ Inline         5   407  3.1  ds1307_get_date
+ Inline         4   331  3.0  ds1307_get_time
+0     20   1    3   147  4.2  bcd2bin
+0     27   1    0   219  4.5  EXT_isr
+0     31   1    1   365  3.3  RB_isr
+0      4   0    0     5  1.0  TBE_isr
+0      4   0    0     5  1.0  RDA_isr
+0      5   0    0    17  1.3  TIMER1_isr
+0     99   3    4   112  2.6  CCP1_isr
+ Inline        13  5559  9.9  @MUL3232
+0      6   0    0    22  1.2  TIMER0_isr
+0     26   1    0   295  1.9  var_init
+2   1508  39    2  3212  9.9  MAIN
+0     21   1    3             @DIV88
+0     37   1    2             @MUL88
+0     81   2   13  5559  9.9  @DIV3232
+1    891  23    1  5821 10.4  fetch_data
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               19
+    Statements              372
+    Comments                290
+    Volume (V)              41217
+    Difficulty (D)          90.6
+    Effort to implement (E) 3736170
+    Time to implement (T)   57 hours, 39 minutes
+    Est Delivered Bugs (B)  8
+    Cyclomatic Complexity   190
+    Maintainability (MI)    69
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-00064    97  0  
+00065-007FF  1334  613  
+00800-00FFF   891  1157  
+01000-017FF  1508  540  
+01800-01FFF     0  2048  
+
+
+
