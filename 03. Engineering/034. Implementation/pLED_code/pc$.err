@@ -1,0 +1,4 @@
+--- Info 300 "C:\Program Files (x86)\PICC\Devices\16F887.h" Line 11(9,15): More info:   *3* Access violation at address 00000000. Read of address 00000000
+*** Error 44 "C:\Program Files (x86)\PICC\Devices\16F887.h" Line 11(9,15): Internal Error - Contact CCS  OUTPUT FILE .map
+      1 Errors,  0 Warnings.
+Build Failed.
