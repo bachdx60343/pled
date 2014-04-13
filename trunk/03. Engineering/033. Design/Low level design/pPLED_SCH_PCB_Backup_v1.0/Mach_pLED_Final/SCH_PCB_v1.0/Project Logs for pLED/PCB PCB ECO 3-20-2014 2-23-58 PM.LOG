@@ -1,0 +1,5 @@
+Added Component: Designator=Bat(BATTERY)
+Added Pin To Net: NetName=GND Pin=Bat-1
+Added Pin To Net: NetName=GND Pin=Bat-1
+Added Pin To Net: NetName=NetBAT_2 Pin=Bat-2
+Added Member To Class: ClassName=SCH Member=Component Bat Battery

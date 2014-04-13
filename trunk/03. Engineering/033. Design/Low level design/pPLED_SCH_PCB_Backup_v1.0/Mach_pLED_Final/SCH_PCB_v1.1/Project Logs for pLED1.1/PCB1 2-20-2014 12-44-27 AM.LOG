@@ -1,0 +1,225 @@
+Removed Pin From Net: NetName=GND Pin=Bat1-2
+Removed Pin From Net: NetName=GND Pin=C1-1
+Removed Pin From Net: NetName=5V Pin=C1-2
+Removed Pin From Net: NetName=5V Pin=C3-1
+Removed Pin From Net: NetName=GND Pin=C6-2
+Removed Pin From Net: NetName=GND Pin=C7-2
+Removed Pin From Net: NetName=5V Pin=C8-2
+Removed Pin From Net: NetName=GND Pin=C9-1
+Removed Pin From Net: NetName=5V Pin=C9-2
+Removed Pin From Net: NetName=RX Pin=J2-2
+Removed Pin From Net: NetName=TX Pin=J2-3
+Removed Pin From Net: NetName=GND Pin=J2-5
+Removed Pin From Net: NetName=GND Pin=P1-2
+Removed Pin From Net: NetName=5V Pin=P1-3
+Removed Pin From Net: NetName=GND Pin=P2-1
+Removed Pin From Net: NetName=SIGHALL Pin=R1-1
+Removed Pin From Net: NetName=GND Pin=R2-1
+Removed Pin From Net: NetName=SIGHALL Pin=R2-2
+Removed Pin From Net: NetName=NetC5_2 Pin=R3-1
+Removed Pin From Net: NetName=5V Pin=R3-2
+Removed Pin From Net: NetName=SCL Pin=R4-1
+Removed Pin From Net: NetName=5V Pin=R4-2
+Removed Pin From Net: NetName=SDA Pin=R5-1
+Removed Pin From Net: NetName=5V Pin=RF1-6
+Removed Pin From Net: NetName=GND Pin=RF1-7
+Removed Pin From Net: NetName=TX Pin=U1-1
+Removed Pin From Net: NetName=GND Pin=U1-6
+Removed Pin From Net: NetName=5V Pin=U1-7
+Removed Pin From Net: NetName=SQW Pin=U1-8
+Removed Pin From Net: NetName=NetRF1_4 Pin=U1-14
+Removed Pin From Net: NetName=PGC Pin=U1-16
+Removed Pin From Net: NetName=PGD Pin=U1-17
+Removed Pin From Net: NetName=MCLR Pin=U1-18
+Removed Pin From Net: NetName=LED_G0 Pin=U1-19
+Removed Pin From Net: NetName=VIN+ Pin=U1-21
+Removed Pin From Net: NetName=NetRF1_2 Pin=U1-22
+Removed Pin From Net: NetName=NetRF1_3 Pin=U1-23
+Removed Pin From Net: NetName=DO Pin=U1-25
+Removed Pin From Net: NetName=ENABLE Pin=U1-26
+Removed Pin From Net: NetName=CLOCK Pin=U1-27
+Removed Pin From Net: NetName=5V Pin=U1-28
+Removed Pin From Net: NetName=GND Pin=U1-29
+Removed Pin From Net: NetName=SIGHALL Pin=U1-36
+Removed Pin From Net: NetName=SCL Pin=U1-37
+Removed Pin From Net: NetName=SDA Pin=U1-42
+Removed Pin From Net: NetName=RX Pin=U1-44
+Removed Pin From Net: NetName=GND Pin=U2-1
+Removed Pin From Net: NetName=GND Pin=U2-2
+Removed Pin From Net: NetName=GND Pin=U2-3
+Removed Pin From Net: NetName=GND Pin=U2-4
+Removed Pin From Net: NetName=SDA Pin=U2-5
+Removed Pin From Net: NetName=SCL Pin=U2-6
+Removed Pin From Net: NetName=GND Pin=U2-7
+Removed Pin From Net: NetName=5V Pin=U2-8
+Removed Pin From Net: NetName=NetU3_1 Pin=Y2-1
+Removed Pin From Net: NetName=NetU3_2 Pin=Y2-2
+Removed Member From Class: ClassName=SCH1.1 Member=J2
+Change Component DesignItemId : Designator=Bat1 Old DesignItemId=Battery New DesignItemId=Jac_Pin
+Change Component DesignItemId : Designator=C3 Old DesignItemId=Cap Pol3 New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C1 Old DesignItemId=Cap Semi New DesignItemId=Cap Pol3
+Change Component DesignItemId : Designator=Y2 Old DesignItemId=CFPX-93 New DesignItemId=XTAL
+Change Component DesignItemId : Designator=P2 Old DesignItemId=Header 2H New DesignItemId=Header 3
+Change Component DesignItemId : Designator=P1 Old DesignItemId=Header 3 New DesignItemId=Header 2H
+Change Component DesignItemId : Designator=RF1 Old DesignItemId=Header 8 New DesignItemId=Header 7
+Change Component DesignItemId : Designator=U1 Old DesignItemId=PIC16F887-E/PT New DesignItemId=AT24C01BN-SP25-T
+Change Component DesignItemId : Designator=R1 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component DesignItemId : Designator=R2 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component DesignItemId : Designator=R3 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component DesignItemId : Designator=R4 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component DesignItemId : Designator=R5 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component DesignItemId : Designator=R6 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component DesignItemId : Designator=R7 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component DesignItemId : Designator=R8 Old DesignItemId=Res3 New DesignItemId=Res Semi
+Change Component Footprint: Designator=P2 Old Footprint=HDR1X2H New Footprint=HDR1X3
+Change Component Footprint: Designator=P1 Old Footprint=HDR1X3 New Footprint=HDR1X2H
+Change Component Footprint: Designator=RF1 Old Footprint=HDR1X8 New Footprint=HDR1X7
+Change Component Footprint: Designator=U1 Old Footprint=TQFP-PT44_N New Footprint=8S1_N
+Change Component Comment : Designator=Y1 Old Comment=20MHz New Comment=32,768KHz
+Change Component Comment : Designator=Y2 Old Comment=32,768KHz New Comment=20MHz
+Change Component Comment : Designator=P1 Old Comment=7805 New Comment=DC 12V
+Change Component Comment : Designator=Bat1 Old Comment=Battery New Comment=Jac_Pin
+Change Component Comment : Designator=C3 Old Comment=Cap Pol3 New Comment=Cap Semi
+Change Component Comment : Designator=C1 Old Comment=Cap Semi New Comment=Cap Pol3
+Change Component Comment : Designator=P2 Old Comment=DC 12V New Comment=7805
+Change Component Comment : Designator=U1 Old Comment=PIC16F887-E/PT New Comment=AT24C01BN-SP25-T
+Change Component Comment : Designator=R1 Old Comment=Res3 New Comment=Res Semi
+Change Component Comment : Designator=R2 Old Comment=Res3 New Comment=Res Semi
+Change Component Comment : Designator=R3 Old Comment=Res3 New Comment=Res Semi
+Change Component Comment : Designator=R4 Old Comment=Res3 New Comment=Res Semi
+Change Component Comment : Designator=R5 Old Comment=Res3 New Comment=Res Semi
+Change Component Comment : Designator=R6 Old Comment=Res3 New Comment=Res Semi
+Change Component Comment : Designator=R7 Old Comment=Res3 New Comment=Res Semi
+Change Component Comment : Designator=R8 Old Comment=Res3 New Comment=Res Semi
+Change Component Designator: OldDesignator=D3 NewDesignator=D1
+Change Component Designator: OldDesignator=D4 NewDesignator=D2
+Change Component Designator: OldDesignator=D5 NewDesignator=D3
+Change Component Designator: OldDesignator=D6 NewDesignator=D4
+Change Component Designator: OldDesignator=D7 NewDesignator=D5
+Change Component Designator: OldDesignator=D8 NewDesignator=D6
+Change Component Designator: OldDesignator=D9 NewDesignator=D7
+Change Component Designator: OldDesignator=D10 NewDesignator=D8
+Change Component Designator: OldDesignator=D11 NewDesignator=D9
+Change Component Designator: OldDesignator=D12 NewDesignator=D10
+Change Component Designator: OldDesignator=U4 NewDesignator=U2
+Change Component Designator: OldDesignator=U5 NewDesignator=U4
+Change Component Designator: OldDesignator=U6 NewDesignator=U7
+Change Component Designator: OldDesignator=U7 NewDesignator=U8
+Change Component Designator: OldDesignator=U8 NewDesignator=U5
+Change Component Description : Designator=C1 Old Description=Capacitor (Semiconductor SIM Model) New Description=Polarized Capacitor (Surface Mount)
+Change Component Description : Designator=Bat1 Old Description=Multicell Battery New Description=
+Change Component Description : Designator=C3 Old Description=Polarized Capacitor (Surface Mount) New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=R1 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=R2 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=R3 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=R4 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=R5 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=R6 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=R7 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=R8 Old Description=Resistor New Description=Semiconductor Resistor
+Change Component Description : Designator=Y2 Old Description=Surface Mount Quartz Crystal New Description=
+Change Component Library : Designator=Y2 Old Library=C-MAC Crystal Oscillator.IntLib New Library=FUFO.SchLib
+Change Component Library : Designator=Bat1 Old Library=Miscellaneous Devices.IntLib New Library=MyLibrary.SchLib
+Added Component: Designator=C6(C1206)
+Added Component: Designator=D11(DO-35)
+Added Component: Designator=D12(DO-35)
+Added Component: Designator=P3(HDR1X3H)
+Added Component: Designator=U6(TQFP-PT44_N)
+Added Pin To Net: NetName=GND Pin=Bat1-1
+Added Pin To Net: NetName=GND Pin=C1-2
+Added Pin To Net: NetName=5V Pin=C2-1
+Added Pin To Net: NetName=5V Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=5V Pin=C6-2
+Added Pin To Net: NetName=GND Pin=C7-1
+Added Pin To Net: NetName=5V Pin=C9-1
+Added Pin To Net: NetName=GND Pin=C9-2
+Added Pin To Net: NetName=GND Pin=P1-1
+Added Pin To Net: NetName=GND Pin=P2-2
+Added Pin To Net: NetName=5V Pin=P2-3
+Added Pin To Net: NetName=TX Pin=P3-1
+Added Pin To Net: NetName=RX Pin=P3-2
+Added Pin To Net: NetName=GND Pin=P3-3
+Added Pin To Net: NetName=SCL Pin=R1-1
+Added Pin To Net: NetName=5V Pin=R1-2
+Added Pin To Net: NetName=SDA Pin=R2-1
+Added Pin To Net: NetName=5V Pin=R2-2
+Added Pin To Net: NetName=SIGHALL Pin=R3-1
+Added Pin To Net: NetName=GND Pin=R4-1
+Added Pin To Net: NetName=SIGHALL Pin=R4-2
+Added Pin To Net: NetName=NetC5_2 Pin=R5-1
+Added Pin To Net: NetName=GND Pin=RF1-5
+Added Pin To Net: NetName=VCC Pin=RF1-7
+Added Pin To Net: NetName=GND Pin=U1-1
+Added Pin To Net: NetName=GND Pin=U1-2
+Added Pin To Net: NetName=GND Pin=U1-3
+Added Pin To Net: NetName=GND Pin=U1-4
+Added Pin To Net: NetName=SDA Pin=U1-5
+Added Pin To Net: NetName=SCL Pin=U1-6
+Added Pin To Net: NetName=GND Pin=U1-7
+Added Pin To Net: NetName=5V Pin=U1-8
+Added Pin To Net: NetName=RX Pin=U6-1
+Added Pin To Net: NetName=GND Pin=U6-6
+Added Pin To Net: NetName=5V Pin=U6-7
+Added Pin To Net: NetName=SQW Pin=U6-8
+Added Pin To Net: NetName=NetRF1_2 Pin=U6-11
+Added Pin To Net: NetName=NetRF1_3 Pin=U6-14
+Added Pin To Net: NetName=NetRF1_4 Pin=U6-15
+Added Pin To Net: NetName=PGC Pin=U6-16
+Added Pin To Net: NetName=PGD Pin=U6-17
+Added Pin To Net: NetName=MCLR Pin=U6-18
+Added Pin To Net: NetName=LED_G0 Pin=U6-19
+Added Pin To Net: NetName=VIN+ Pin=U6-21
+Added Pin To Net: NetName=DO Pin=U6-25
+Added Pin To Net: NetName=ENABLE Pin=U6-26
+Added Pin To Net: NetName=CLOCK Pin=U6-27
+Added Pin To Net: NetName=5V Pin=U6-28
+Added Pin To Net: NetName=GND Pin=U6-29
+Added Pin To Net: NetName=SIGHALL Pin=U6-36
+Added Pin To Net: NetName=SCL Pin=U6-37
+Added Pin To Net: NetName=SDA Pin=U6-42
+Added Pin To Net: NetName=TX Pin=U6-44
+Added Pin To Net: NetName=NetU3_1 Pin=Y1-1
+Added Pin To Net: NetName=NetU3_2 Pin=Y1-2
+Change Net Name : Old Net Name=NetD3_1 New Net Name=NetD1_1
+Change Net Name : Old Net Name=NetD4_1 New Net Name=NetD2_1
+Change Net Name : Old Net Name=NetD5_1 New Net Name=NetD3_1
+Change Net Name : Old Net Name=NetD6_1 New Net Name=NetD4_1
+Change Net Name : Old Net Name=NetD7_1 New Net Name=NetD5_1
+Change Net Name : Old Net Name=NetD8_1 New Net Name=NetD6_1
+Change Net Name : Old Net Name=NetD9_1 New Net Name=NetD7_1
+Change Net Name : Old Net Name=NetD10_1 New Net Name=NetD8_1
+Change Net Name : Old Net Name=NetD11_1 New Net Name=NetD9_1
+Change Net Name : Old Net Name=NetD12_1 New Net Name=NetD10_1
+Change Net Name : Old Net Name=NetU4_14 New Net Name=NetU2_14
+Change Net Name : Old Net Name=NetU5_9 New Net Name=NetU4_9
+Change Net Name : Old Net Name=NetU5_14 New Net Name=NetU4_14
+Change Net Name : Old Net Name=NetU7_14 New Net Name=NetU5_9
+Change Net Name : Old Net Name=NetU8_14 New Net Name=NetU5_14
+Added Pin To Net: NetName=NetBat1_3 Pin=C3-1
+Added Pin To Net: NetName=NetBat1_3 Pin=U3-3
+Added Net: Name=NetBat1_3
+Added Pin To Net: NetName=NetC1_1 Pin=C1-1
+Added Pin To Net: NetName=NetC1_1 Pin=D12-2
+Added Pin To Net: NetName=NetC1_1 Pin=P2-1
+Added Net: Name=NetC1_1
+Added Pin To Net: NetName=NetC7_2 Pin=C7-2
+Added Pin To Net: NetName=NetC7_2 Pin=U6-31
+Added Pin To Net: NetName=NetC7_2 Pin=Y2-1
+Added Net: Name=NetC7_2
+Added Pin To Net: NetName=NetC8_2 Pin=C8-2
+Added Pin To Net: NetName=NetC8_2 Pin=U6-30
+Added Pin To Net: NetName=NetC8_2 Pin=Y2-2
+Added Net: Name=NetC8_2
+Added Pin To Net: NetName=NetD11_1 Pin=D11-1
+Added Pin To Net: NetName=NetD11_1 Pin=D12-1
+Added Pin To Net: NetName=NetD11_1 Pin=P1-2
+Added Net: Name=NetD11_1
+Added Pin To Net: NetName=NetD11_2 Pin=D11-2
+Added Pin To Net: NetName=NetD11_2 Pin=R3-2
+Added Net: Name=NetD11_2
+Added Pin To Net: NetName=NetRF1_1 Pin=RF1-1
+Added Pin To Net: NetName=NetRF1_1 Pin=U6-10
+Added Net: Name=NetRF1_1
+Added Member To Class: ClassName=SCH1.1 Member=Component P3 Header 3H
+Added Room: Name=SCH1.1
