@@ -1,0 +1,12 @@
+Added Component: Designator=C4(SM/C_0805)
+Added Component: Designator=R12(SM/C_0805)
+Added Pin To Net: NetName=5V Pin=C4-1
+Added Pin To Net: NetName=GND Pin=C4-2
+Added Pin To Net: NetName=NetLED5_3 Pin=LED6-3
+Added Pin To Net: NetName=NetLED5_3 Pin=LED6-4
+Added Pin To Net: NetName=NetLED5_3 Pin=Q2-1
+Added Pin To Net: NetName=SIGHALL Pin=R12-1
+Added Pin To Net: NetName=5V Pin=R12-2
+Added Member To Class: ClassName=SCH Member=Component C4 Cap Semi
+Added Member To Class: ClassName=SCH Member=Component R12 Res Semi
+Added Room: Name=SCH

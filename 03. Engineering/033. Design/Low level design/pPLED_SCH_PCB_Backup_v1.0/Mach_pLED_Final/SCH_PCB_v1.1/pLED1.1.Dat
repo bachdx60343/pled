@@ -1,0 +1,20 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~pLED1.1.PrjPcb|ReportField=ProjectFullPath~C:\Users\tungnt\SkyDrive\CapstonePrj_pLED\pLED Documents\Mach_pLED_Final\SCH_PCB_v1.1\pLED1.1.PrjPcb|ReportField=Title~Bill of Materials For Project [pLED1.1.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~50|ReportField=ReportTime~12:46:42 PM|ReportField=ReportDate~3/14/2014|ReportField=ReportDateTime~3/14/2014 12:46:42 PM|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~3/14/2014|ReportField=CurrentTime~12:46:09 PM|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\Users\tungnt\SkyDrive\CapstonePrj_pLED\pLED Documents\Mach_pLED_Final\SCH_PCB_v1.1\SCH1.1.SchDoc|ReportField=DocumentName~SCH1.1.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~3/14/2014|ReportField=Organization~|ReportField=ProjectName~pLED1.1.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~pLED1.1.PrjPcb|ReportField=DataSourceFullPath~C:\Users\tungnt\SkyDrive\CapstonePrj_pLED\pLED Documents\Mach_pLED_Final\SCH_PCB_v1.1\pLED1.1.PrjPcb
+Jac_Pin||Bat1|Jac_Pin|Jac_Pin|1
+Cap Pol3|Polarized Capacitor (Surface Mount)|C1, C2|CAP POL 2|Cap Pol3|2
+Cap Semi|Capacitor (Semiconductor SIM Model)|C3, C4, C5, C7, C8, C9|SM/C_0805|Cap Semi|6
+Cap Semi|Capacitor (Semiconductor SIM Model)|C6|C1206|Cap Semi|1
+Diode 1N4148|High Conductance Fast Diode|D2|DO-35|Diode 1N4148|1
+Header 3|Header, 3-Pin|Hall1|HDR1X3|Header 3|1
+Programming|Header, 5-Pin, Right Angle|J1|HDR1X5H|Header 5H|1
+or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!||LED1, LED2, LED3, LED4, LED5, LED6, LED7, LED8, LED9, LED10, LED11, LED12, LED13, LED14, LED15, LED16|RGBLED5050|RGBLED5050|16
+DC 12V|Header, 2-Pin, Right Angle|P1|HDR1X2H|Header 2H|1
+7805|Header, 3-Pin|P2|HDR1X3|Header 3|1
+Header 3H|Header, 3-Pin, Right Angle|P3|HDR1X3H|Header 3H|1
+Res Semi|Semiconductor Resistor|R1, R2, R5, R6, R7, R8|SM/C_0805|Res Semi|6
+RF Module|Header, 7-Pin|RF1|HDR1X7|Header 7|1
+AT24C01BN-SP25-T|1Kbit (128 x 8), 2-wire Bus Automotive Serial EEPROM with Write Protect, 2.5V, 8-Pin SOIC, Tape & Reel|U1|8S1_N|AT24C01BN-SP25-T|1
+74595|8-BIT SFT REG WIRTH OUTPUT LCH|U2, U4, U5, U7, U8, U9|SO16|74595|6
+DS1307Z|64 X 8 Serial Real-Time Clock|U3|SOIC8N_N|DS1307Z|1
+PIC16F887-E/PT|Flash-Based, 8-Bit CMOS Microcontroller with nanoWatt Technology, 8K (x14-Bit words) Program Memory, 624 Bytes Data Memory, 35 I/O pins, 44-Pin TQFP, Standard VDD Range, Extended Temperature|U6|TQFP-PT44_N|PIC16F887-E/PT|1
+32,768KHz|Surface Mount Quartz Crystal|Y1|CFPX-93|CFPX-93|1
+20MHz||Y2|CRYSTAL|XTAL|1

@@ -1,0 +1,19 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~pLED.PrjPcb|ReportField=ProjectFullPath~C:\Users\tungnt\SkyDrive\Documents\pLED Documents\SCH_PCB\pLED.PrjPcb|ReportField=Title~Bill of Materials For Project [pLED.PrjPcb] (No PCB Document Selected)|ReportField=TotalQuantity~70|ReportField=ReportTime~3:16:28 PM|ReportField=ReportDate~1/24/2014|ReportField=ReportDateTime~1/24/2014 3:16:28 PM|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=Address1~|ReportField=Address2~|ReportField=Address3~|ReportField=Address4~|ReportField=ApprovedBy~|ReportField=Author~|ReportField=CheckedBy~|ReportField=CompanyName~|ReportField=CurrentDate~1/24/2014|ReportField=CurrentTime~3:15:47 PM|ReportField=Date~|ReportField=DocumentFullPathAndName~C:\Users\tungnt\SkyDrive\Documents\pLED Documents\SCH_PCB\SCH.SchDoc|ReportField=DocumentName~SCH.SchDoc|ReportField=DocumentNumber~|ReportField=DrawnBy~|ReportField=Engineer~|ReportField=ImagePath~|ReportField=ModifiedDate~1/24/2014|ReportField=Organization~|ReportField=ProjectName~pLED.PrjPcb|ReportField=Revision~|ReportField=Rule~|ReportField=SheetNumber~|ReportField=SheetTotal~|ReportField=Time~|ReportField=Title~|ReportField=DataSourceFileName~pLED.PrjPcb|ReportField=DataSourceFullPath~C:\Users\tungnt\SkyDrive\Documents\pLED Documents\SCH_PCB\pLED.PrjPcb
+Battery|Multicell Battery|Bat|BAT-2|Battery|1
+Cap Semi|Capacitor (Semiconductor SIM Model)|C1, C4, C5, C6, C7, C8, C9|C1206|Cap Semi|7
+Cap Pol1|Polarized Capacitor (Radial)|C2, C3|RB7.6-15|Cap Pol1|2
+Diode 1N4148|High Conductance Fast Diode|D1, D2|DO-35|Diode 1N4148|2
+R|Typical BLUE SiC LED|D3, D5, D7, D9, D11, D13, D15, D17, D19, D21, D23, D25, D27, D29, D31, D33|3.5X2.8X1.9|LED3|16
+G|Typical BLUE SiC LED|D4, D6, D8, D10, D12, D14, D16, D18, D20, D22, D24, D26, D28, D30, D32, D34|3.5X2.8X1.9|LED3|16
+Header 3|Header, 3-Pin|Hall|HDR1X3|Header 3|1
+Programming|Header, 5-Pin, Right Angle|J1|HDR1X5H|Header 5H|1
+7805|Header, 3-Pin|P1|HDR1X3|Header 3|1
+DC 12V|Header, 2-Pin, Right Angle|P2|HDR1X2H|Header 2H|1
+QNPN|NPN Bipolar Transistor|Q1, Q2, Q3, Q4|SOT-23B_N|QNPN|4
+Res3|Resistor|R1, R2, R3, R4, R5, R6, R7, R8, R9, R10, R11, R12|J1-0603|Res3|12
+RF Module|Header, 8-Pin|RF|HDR1X8|Header 8|1
+PIC16F887-E/PT|Flash-Based, 8-Bit CMOS Microcontroller with nanoWatt Technology, 8K (x14-Bit words) Program Memory, 624 Bytes Data Memory, 35 I/O pins, 44-Pin TQFP, Standard VDD Range, Extended Temperature|U1|TQFP-PT44_N|PIC16F887-E/PT|1
+AT24C01BN-SP25-T|1Kbit (128 x 8), 2-wire Bus Automotive Serial EEPROM with Write Protect, 2.5V, 8-Pin SOIC, Tape & Reel|U2|8S1_N|AT24C01BN-SP25-T|1
+DS1307Z|64 X 8 Serial Real-Time Clock|U3|SOIC8N_N|DS1307Z|1
+20MHz|Surface Mount Quartz Crystal|Y1|CFPX-93|CFPX-93|1
+32,768KHz|Surface Mount Quartz Crystal|Y2|CFPX-93|CFPX-93|1

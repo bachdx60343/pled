@@ -1,0 +1,112 @@
+Removed Pin From Net: NetName=GND Pin=C3-1
+Removed Pin From Net: NetName=5V Pin=R7-2
+Removed Pin From Net: NetName=GND Pin=R8-1
+Removed Member From Class: ClassName=SCH Member=C5
+Removed Member From Class: ClassName=SCH Member=R10
+Removed Member From Class: ClassName=SCH Member=R11
+Change Component Designator: OldDesignator=Bat NewDesignator=Bat1
+Change Component Designator: OldDesignator=C4 NewDesignator=C3
+Change Component Designator: OldDesignator=C5 NewDesignator=C4
+Change Component Designator: OldDesignator=R9 NewDesignator=R7
+Change Component Designator: OldDesignator=R10 NewDesignator=R8
+Change Component Designator: OldDesignator=R11 NewDesignator=R9
+Added Component: Designator=LED1(3528)
+Added Component: Designator=LED2(3528)
+Added Component: Designator=LED3(3528)
+Added Component: Designator=LED4(3528)
+Added Component: Designator=LED5(3528)
+Added Component: Designator=LED6(3528)
+Added Component: Designator=LED7(3528)
+Added Component: Designator=LED8(3528)
+Added Component: Designator=LED9(3528)
+Added Component: Designator=LED10(3528)
+Added Component: Designator=LED11(3528)
+Added Component: Designator=LED12(3528)
+Added Component: Designator=LED13(3528)
+Added Component: Designator=LED14(3528)
+Added Component: Designator=LED15(3528)
+Added Component: Designator=LED16(3528)
+Added Pin To Net: NetName=LED6 Pin=LED1-1
+Added Pin To Net: NetName=LED7 Pin=LED1-2
+Added Pin To Net: NetName=NetLED1_3 Pin=LED1-3
+Added Pin To Net: NetName=NetLED1_3 Pin=LED1-4
+Added Pin To Net: NetName=LED4 Pin=LED2-1
+Added Pin To Net: NetName=LED5 Pin=LED2-2
+Added Pin To Net: NetName=NetLED1_3 Pin=LED2-3
+Added Pin To Net: NetName=NetLED1_3 Pin=LED2-4
+Added Pin To Net: NetName=LED2 Pin=LED3-1
+Added Pin To Net: NetName=LED3 Pin=LED3-2
+Added Pin To Net: NetName=NetLED1_3 Pin=LED3-3
+Added Pin To Net: NetName=NetLED1_3 Pin=LED3-4
+Added Pin To Net: NetName=LED0 Pin=LED4-1
+Added Pin To Net: NetName=LED1 Pin=LED4-2
+Added Pin To Net: NetName=NetLED1_3 Pin=LED4-3
+Added Pin To Net: NetName=NetLED1_3 Pin=LED4-4
+Added Pin To Net: NetName=LED6 Pin=LED5-1
+Added Pin To Net: NetName=LED7 Pin=LED5-2
+Added Pin To Net: NetName=NetLED5_3 Pin=LED5-3
+Added Pin To Net: NetName=NetLED5_3 Pin=LED5-4
+Added Pin To Net: NetName=LED4 Pin=LED6-1
+Added Pin To Net: NetName=LED5 Pin=LED6-2
+Added Pin To Net: NetName=NetLED5_3 Pin=LED6-3
+Added Pin To Net: NetName=NetLED5_3 Pin=LED6-4
+Added Pin To Net: NetName=LED2 Pin=LED7-1
+Added Pin To Net: NetName=LED3 Pin=LED7-2
+Added Pin To Net: NetName=NetLED5_3 Pin=LED7-3
+Added Pin To Net: NetName=NetLED5_3 Pin=LED7-4
+Added Pin To Net: NetName=LED0 Pin=LED8-1
+Added Pin To Net: NetName=LED1 Pin=LED8-2
+Added Pin To Net: NetName=NetLED5_3 Pin=LED8-3
+Added Pin To Net: NetName=NetLED5_3 Pin=LED8-4
+Added Pin To Net: NetName=LED6 Pin=LED9-1
+Added Pin To Net: NetName=LED7 Pin=LED9-2
+Added Pin To Net: NetName=NetLED9_3 Pin=LED9-3
+Added Pin To Net: NetName=NetLED9_3 Pin=LED9-4
+Added Pin To Net: NetName=LED4 Pin=LED10-1
+Added Pin To Net: NetName=LED5 Pin=LED10-2
+Added Pin To Net: NetName=NetLED9_3 Pin=LED10-3
+Added Pin To Net: NetName=NetLED9_3 Pin=LED10-4
+Added Pin To Net: NetName=LED2 Pin=LED11-1
+Added Pin To Net: NetName=LED3 Pin=LED11-2
+Added Pin To Net: NetName=NetLED9_3 Pin=LED11-3
+Added Pin To Net: NetName=NetLED9_3 Pin=LED11-4
+Added Pin To Net: NetName=LED0 Pin=LED12-1
+Added Pin To Net: NetName=LED1 Pin=LED12-2
+Added Pin To Net: NetName=NetLED9_3 Pin=LED12-3
+Added Pin To Net: NetName=NetLED9_3 Pin=LED12-4
+Added Pin To Net: NetName=LED6 Pin=LED13-1
+Added Pin To Net: NetName=LED7 Pin=LED13-2
+Added Pin To Net: NetName=NetLED13_3 Pin=LED13-3
+Added Pin To Net: NetName=NetLED13_3 Pin=LED13-4
+Added Pin To Net: NetName=LED4 Pin=LED14-1
+Added Pin To Net: NetName=LED5 Pin=LED14-2
+Added Pin To Net: NetName=NetLED13_3 Pin=LED14-3
+Added Pin To Net: NetName=NetLED13_3 Pin=LED14-4
+Added Pin To Net: NetName=LED2 Pin=LED15-1
+Added Pin To Net: NetName=LED3 Pin=LED15-2
+Added Pin To Net: NetName=NetLED13_3 Pin=LED15-3
+Added Pin To Net: NetName=NetLED13_3 Pin=LED15-4
+Added Pin To Net: NetName=LED0 Pin=LED16-1
+Added Pin To Net: NetName=LED1 Pin=LED16-2
+Added Pin To Net: NetName=NetLED13_3 Pin=LED16-3
+Added Pin To Net: NetName=NetLED13_3 Pin=LED16-4
+Change Net Name : Old Net Name=NetBAT_2 New Net Name=NetBat1_2
+Change Net Name : Old Net Name=NetC4_2 New Net Name=NetC3_2
+Change Net Name : Old Net Name=NetC5_2 New Net Name=NetC4_2
+Added Member To Class: ClassName=SCH Member=Component LED1 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED2 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED3 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED4 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED5 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED6 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED7 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED8 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED9 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED10 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED11 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED12 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED13 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED14 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED15 150141RV73100
+Added Member To Class: ClassName=SCH Member=Component LED16 150141RV73100
+Added Room: Name=SCH

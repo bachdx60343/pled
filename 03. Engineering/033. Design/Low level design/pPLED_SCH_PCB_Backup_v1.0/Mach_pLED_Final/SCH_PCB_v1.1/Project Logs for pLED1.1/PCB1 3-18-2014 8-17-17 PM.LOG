@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=GND Pin=BAT-1
+Change Net Name : Old Net Name=NetBAT_3 New Net Name=NetBat_2
+Added Room: Name=SCH1.1

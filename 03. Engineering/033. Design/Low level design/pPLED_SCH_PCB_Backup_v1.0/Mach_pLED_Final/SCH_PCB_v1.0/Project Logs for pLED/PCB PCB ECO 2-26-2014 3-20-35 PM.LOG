@@ -1,0 +1,3 @@
+Added Pin To Net: NetName=5V Pin=RF1-7
+Added Member To Class: ClassName=SCH Member=Component Y1 32,768KHz
+Added Room: Name=SCH

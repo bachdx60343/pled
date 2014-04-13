@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=Bat1-1
+Removed Member From Class: ClassName=SCH1.1 Member=Bat1
+Added Component: Designator=Bat(PCBComponent_1)
+Added Pin To Net: NetName=NetBat_1 Pin=Bat-1
+Added Pin To Net: NetName=NetBat_1 Pin=C3-1
+Added Pin To Net: NetName=NetBat_1 Pin=U3-3
+Added Net: Name=NetBat_1
+Added Member To Class: ClassName=SCH1.1 Member=Component Bat Battery
+Added Room: Name=SCH1.1

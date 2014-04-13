@@ -1,0 +1,394 @@
+Removed Pin From Net: NetName=GND Pin=C6-1
+Removed Pin From Net: NetName=5V Pin=C6-2
+Removed Pin From Net: NetName=GND Pin=D1-2
+Removed Pin From Net: NetName=GND Pin=D2-2
+Removed Pin From Net: NetName=GND Pin=D3-2
+Removed Pin From Net: NetName=GND Pin=D4-2
+Removed Pin From Net: NetName=GND Pin=D5-2
+Removed Pin From Net: NetName=GND Pin=D6-2
+Removed Pin From Net: NetName=GND Pin=D7-2
+Removed Pin From Net: NetName=GND Pin=D8-2
+Removed Pin From Net: NetName=GND Pin=D9-2
+Removed Pin From Net: NetName=GND Pin=D10-2
+Removed Pin From Net: NetName=GND Pin=D13-2
+Removed Pin From Net: NetName=GND Pin=D14-2
+Removed Pin From Net: NetName=GND Pin=D15-2
+Removed Pin From Net: NetName=GND Pin=D16-2
+Removed Pin From Net: NetName=GND Pin=D17-2
+Removed Pin From Net: NetName=GND Pin=D18-2
+Removed Pin From Net: NetName=GND Pin=D19-2
+Removed Pin From Net: NetName=GND Pin=D20-2
+Removed Pin From Net: NetName=GND Pin=D21-2
+Removed Pin From Net: NetName=GND Pin=D22-2
+Removed Pin From Net: NetName=GND Pin=D23-2
+Removed Pin From Net: NetName=GND Pin=D24-2
+Removed Pin From Net: NetName=GND Pin=D25-2
+Removed Pin From Net: NetName=GND Pin=D26-2
+Removed Pin From Net: NetName=GND Pin=D27-2
+Removed Pin From Net: NetName=GND Pin=D28-2
+Removed Pin From Net: NetName=GND Pin=D29-2
+Removed Pin From Net: NetName=GND Pin=D30-2
+Removed Pin From Net: NetName=GND Pin=D31-2
+Removed Pin From Net: NetName=GND Pin=D32-2
+Removed Pin From Net: NetName=GND Pin=D33-2
+Removed Pin From Net: NetName=GND Pin=D34-2
+Removed Pin From Net: NetName=GND Pin=D35-2
+Removed Pin From Net: NetName=GND Pin=D36-2
+Removed Pin From Net: NetName=GND Pin=D37-2
+Removed Pin From Net: NetName=GND Pin=D38-2
+Removed Pin From Net: NetName=GND Pin=D39-2
+Removed Pin From Net: NetName=GND Pin=D40-2
+Removed Pin From Net: NetName=GND Pin=D41-2
+Removed Pin From Net: NetName=GND Pin=D42-2
+Removed Pin From Net: NetName=GND Pin=D43-2
+Removed Pin From Net: NetName=GND Pin=D44-2
+Removed Pin From Net: NetName=GND Pin=D45-2
+Removed Pin From Net: NetName=GND Pin=D46-2
+Removed Pin From Net: NetName=GND Pin=D47-2
+Removed Pin From Net: NetName=GND Pin=D48-2
+Removed Pin From Net: NetName=GND Pin=D49-2
+Removed Pin From Net: NetName=GND Pin=D50-2
+Removed Pin From Net: NetName=5V Pin=U2-10
+Removed Pin From Net: NetName=5V Pin=U4-10
+Removed Pin From Net: NetName=5V Pin=U5-10
+Removed Pin From Net: NetName=RX Pin=U6-1
+Removed Pin From Net: NetName=GND Pin=U6-6
+Removed Pin From Net: NetName=5V Pin=U6-7
+Removed Pin From Net: NetName=SQW Pin=U6-8
+Removed Pin From Net: NetName=NetRF1_1 Pin=U6-10
+Removed Pin From Net: NetName=NetRF1_2 Pin=U6-11
+Removed Pin From Net: NetName=NetRF1_3 Pin=U6-14
+Removed Pin From Net: NetName=NetRF1_4 Pin=U6-15
+Removed Pin From Net: NetName=PGC Pin=U6-16
+Removed Pin From Net: NetName=PGD Pin=U6-17
+Removed Pin From Net: NetName=MCLR Pin=U6-18
+Removed Pin From Net: NetName=LED_G0 Pin=U6-19
+Removed Pin From Net: NetName=VIN+ Pin=U6-21
+Removed Pin From Net: NetName=DO Pin=U6-25
+Removed Pin From Net: NetName=ENABLE Pin=U6-26
+Removed Pin From Net: NetName=CLOCK Pin=U6-27
+Removed Pin From Net: NetName=5V Pin=U6-28
+Removed Pin From Net: NetName=GND Pin=U6-29
+Removed Pin From Net: NetName=NetC8_2 Pin=U6-30
+Removed Pin From Net: NetName=NetC7_2 Pin=U6-31
+Removed Pin From Net: NetName=SIGHALL Pin=U6-36
+Removed Pin From Net: NetName=SCL Pin=U6-37
+Removed Pin From Net: NetName=SDA Pin=U6-42
+Removed Pin From Net: NetName=TX Pin=U6-44
+Removed Pin From Net: NetName=5V Pin=U7-10
+Removed Pin From Net: NetName=5V Pin=U8-10
+Removed Pin From Net: NetName=5V Pin=U9-10
+Removed Member From Class: ClassName=SCH1.1 Member=D3
+Removed Member From Class: ClassName=SCH1.1 Member=D4
+Removed Member From Class: ClassName=SCH1.1 Member=D5
+Removed Member From Class: ClassName=SCH1.1 Member=D6
+Removed Member From Class: ClassName=SCH1.1 Member=D7
+Removed Member From Class: ClassName=SCH1.1 Member=D8
+Removed Member From Class: ClassName=SCH1.1 Member=D9
+Removed Member From Class: ClassName=SCH1.1 Member=D10
+Removed Member From Class: ClassName=SCH1.1 Member=D11
+Removed Member From Class: ClassName=SCH1.1 Member=D12
+Removed Member From Class: ClassName=SCH1.1 Member=D13
+Removed Member From Class: ClassName=SCH1.1 Member=D14
+Removed Member From Class: ClassName=SCH1.1 Member=D15
+Removed Member From Class: ClassName=SCH1.1 Member=D16
+Removed Member From Class: ClassName=SCH1.1 Member=D17
+Removed Member From Class: ClassName=SCH1.1 Member=D18
+Removed Member From Class: ClassName=SCH1.1 Member=D19
+Removed Member From Class: ClassName=SCH1.1 Member=D20
+Removed Member From Class: ClassName=SCH1.1 Member=D21
+Removed Member From Class: ClassName=SCH1.1 Member=D22
+Removed Member From Class: ClassName=SCH1.1 Member=D23
+Removed Member From Class: ClassName=SCH1.1 Member=D24
+Removed Member From Class: ClassName=SCH1.1 Member=D25
+Removed Member From Class: ClassName=SCH1.1 Member=D26
+Removed Member From Class: ClassName=SCH1.1 Member=D27
+Removed Member From Class: ClassName=SCH1.1 Member=D28
+Removed Member From Class: ClassName=SCH1.1 Member=D29
+Removed Member From Class: ClassName=SCH1.1 Member=D30
+Removed Member From Class: ClassName=SCH1.1 Member=D31
+Removed Member From Class: ClassName=SCH1.1 Member=D32
+Removed Member From Class: ClassName=SCH1.1 Member=D33
+Removed Member From Class: ClassName=SCH1.1 Member=D34
+Removed Member From Class: ClassName=SCH1.1 Member=D35
+Removed Member From Class: ClassName=SCH1.1 Member=D36
+Removed Member From Class: ClassName=SCH1.1 Member=D37
+Removed Member From Class: ClassName=SCH1.1 Member=D38
+Removed Member From Class: ClassName=SCH1.1 Member=D39
+Removed Member From Class: ClassName=SCH1.1 Member=D40
+Removed Member From Class: ClassName=SCH1.1 Member=D41
+Removed Member From Class: ClassName=SCH1.1 Member=D42
+Removed Member From Class: ClassName=SCH1.1 Member=D43
+Removed Member From Class: ClassName=SCH1.1 Member=D44
+Removed Member From Class: ClassName=SCH1.1 Member=D45
+Removed Member From Class: ClassName=SCH1.1 Member=D46
+Removed Member From Class: ClassName=SCH1.1 Member=D47
+Removed Member From Class: ClassName=SCH1.1 Member=D48
+Removed Member From Class: ClassName=SCH1.1 Member=D49
+Removed Member From Class: ClassName=SCH1.1 Member=D50
+Change Component Designator: OldDesignator=D11 NewDesignator=D1
+Change Component Designator: OldDesignator=D12 NewDesignator=D2
+Added Component: Designator=C6(C1206)
+Added Component: Designator=LED1(RGBLED5050)
+Added Component: Designator=LED2(RGBLED5050)
+Added Component: Designator=LED3(RGBLED5050)
+Added Component: Designator=LED4(RGBLED5050)
+Added Component: Designator=LED5(RGBLED5050)
+Added Component: Designator=LED6(RGBLED5050)
+Added Component: Designator=LED7(RGBLED5050)
+Added Component: Designator=LED8(RGBLED5050)
+Added Component: Designator=LED9(RGBLED5050)
+Added Component: Designator=LED10(RGBLED5050)
+Added Component: Designator=LED11(RGBLED5050)
+Added Component: Designator=LED12(RGBLED5050)
+Added Component: Designator=LED13(RGBLED5050)
+Added Component: Designator=LED14(RGBLED5050)
+Added Component: Designator=LED15(RGBLED5050)
+Added Component: Designator=LED16(RGBLED5050)
+Added Component: Designator=U6(TQFP-PT44_N)
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=5V Pin=C6-2
+Added Pin To Net: NetName=GND Pin=LED1-4
+Added Pin To Net: NetName=GND Pin=LED1-5
+Added Pin To Net: NetName=GND Pin=LED1-6
+Added Pin To Net: NetName=GND Pin=LED2-4
+Added Pin To Net: NetName=GND Pin=LED2-5
+Added Pin To Net: NetName=GND Pin=LED2-6
+Added Pin To Net: NetName=GND Pin=LED3-4
+Added Pin To Net: NetName=GND Pin=LED3-5
+Added Pin To Net: NetName=GND Pin=LED3-6
+Added Pin To Net: NetName=GND Pin=LED4-4
+Added Pin To Net: NetName=GND Pin=LED4-5
+Added Pin To Net: NetName=GND Pin=LED4-6
+Added Pin To Net: NetName=GND Pin=LED5-4
+Added Pin To Net: NetName=GND Pin=LED5-5
+Added Pin To Net: NetName=GND Pin=LED5-6
+Added Pin To Net: NetName=GND Pin=LED6-4
+Added Pin To Net: NetName=GND Pin=LED6-5
+Added Pin To Net: NetName=GND Pin=LED6-6
+Added Pin To Net: NetName=GND Pin=LED7-4
+Added Pin To Net: NetName=GND Pin=LED7-5
+Added Pin To Net: NetName=GND Pin=LED7-6
+Added Pin To Net: NetName=GND Pin=LED8-4
+Added Pin To Net: NetName=GND Pin=LED8-5
+Added Pin To Net: NetName=GND Pin=LED8-6
+Added Pin To Net: NetName=GND Pin=LED9-4
+Added Pin To Net: NetName=GND Pin=LED9-5
+Added Pin To Net: NetName=GND Pin=LED9-6
+Added Pin To Net: NetName=GND Pin=LED10-4
+Added Pin To Net: NetName=GND Pin=LED10-5
+Added Pin To Net: NetName=GND Pin=LED10-6
+Added Pin To Net: NetName=GND Pin=LED11-4
+Added Pin To Net: NetName=GND Pin=LED11-5
+Added Pin To Net: NetName=GND Pin=LED11-6
+Added Pin To Net: NetName=GND Pin=LED12-4
+Added Pin To Net: NetName=GND Pin=LED12-5
+Added Pin To Net: NetName=GND Pin=LED12-6
+Added Pin To Net: NetName=GND Pin=LED13-4
+Added Pin To Net: NetName=GND Pin=LED13-5
+Added Pin To Net: NetName=GND Pin=LED13-6
+Added Pin To Net: NetName=GND Pin=LED14-4
+Added Pin To Net: NetName=GND Pin=LED14-5
+Added Pin To Net: NetName=GND Pin=LED14-6
+Added Pin To Net: NetName=GND Pin=LED15-4
+Added Pin To Net: NetName=GND Pin=LED15-5
+Added Pin To Net: NetName=GND Pin=LED15-6
+Added Pin To Net: NetName=GND Pin=LED16-4
+Added Pin To Net: NetName=GND Pin=LED16-5
+Added Pin To Net: NetName=GND Pin=LED16-6
+Added Pin To Net: NetName=RX Pin=U6-1
+Added Pin To Net: NetName=GND Pin=U6-6
+Added Pin To Net: NetName=5V Pin=U6-7
+Added Pin To Net: NetName=SQW Pin=U6-8
+Added Pin To Net: NetName=NetRF1_1 Pin=U6-10
+Added Pin To Net: NetName=NetRF1_2 Pin=U6-11
+Added Pin To Net: NetName=NetRF1_3 Pin=U6-14
+Added Pin To Net: NetName=NetRF1_4 Pin=U6-15
+Added Pin To Net: NetName=PGC Pin=U6-16
+Added Pin To Net: NetName=PGD Pin=U6-17
+Added Pin To Net: NetName=MCLR Pin=U6-18
+Added Pin To Net: NetName=LED_G0 Pin=U6-19
+Added Pin To Net: NetName=VIN+ Pin=U6-21
+Added Pin To Net: NetName=DO Pin=U6-25
+Added Pin To Net: NetName=ENABLE Pin=U6-26
+Added Pin To Net: NetName=CLOCK Pin=U6-27
+Added Pin To Net: NetName=5V Pin=U6-28
+Added Pin To Net: NetName=GND Pin=U6-29
+Added Pin To Net: NetName=NetC8_2 Pin=U6-30
+Added Pin To Net: NetName=NetC7_2 Pin=U6-31
+Added Pin To Net: NetName=SIGHALL Pin=U6-36
+Added Pin To Net: NetName=SCL Pin=U6-37
+Added Pin To Net: NetName=SDA Pin=U6-42
+Added Pin To Net: NetName=TX Pin=U6-44
+Change Net Name : Old Net Name=NetD11_1 New Net Name=NetD1_1
+Change Net Name : Old Net Name=NetD11_2 New Net Name=NetD1_2
+Added Pin To Net: NetName=NetLED1_1 Pin=LED1-1
+Added Pin To Net: NetName=NetLED1_1 Pin=U4-7
+Added Net: Name=NetLED1_1
+Added Pin To Net: NetName=NetLED1_2 Pin=LED1-2
+Added Pin To Net: NetName=NetLED1_2 Pin=U2-7
+Added Net: Name=NetLED1_2
+Added Pin To Net: NetName=NetLED1_3 Pin=LED1-3
+Added Pin To Net: NetName=NetLED1_3 Pin=U5-7
+Added Net: Name=NetLED1_3
+Added Pin To Net: NetName=NetLED2_1 Pin=LED2-1
+Added Pin To Net: NetName=NetLED2_1 Pin=U4-6
+Added Net: Name=NetLED2_1
+Added Pin To Net: NetName=NetLED2_2 Pin=LED2-2
+Added Pin To Net: NetName=NetLED2_2 Pin=U2-6
+Added Net: Name=NetLED2_2
+Added Pin To Net: NetName=NetLED2_3 Pin=LED2-3
+Added Pin To Net: NetName=NetLED2_3 Pin=U5-6
+Added Net: Name=NetLED2_3
+Added Pin To Net: NetName=NetLED3_1 Pin=LED3-1
+Added Pin To Net: NetName=NetLED3_1 Pin=U4-5
+Added Net: Name=NetLED3_1
+Added Pin To Net: NetName=NetLED3_2 Pin=LED3-2
+Added Pin To Net: NetName=NetLED3_2 Pin=U2-5
+Added Net: Name=NetLED3_2
+Added Pin To Net: NetName=NetLED3_3 Pin=LED3-3
+Added Pin To Net: NetName=NetLED3_3 Pin=U5-5
+Added Net: Name=NetLED3_3
+Added Pin To Net: NetName=NetLED4_1 Pin=LED4-1
+Added Pin To Net: NetName=NetLED4_1 Pin=U4-4
+Added Net: Name=NetLED4_1
+Added Pin To Net: NetName=NetLED4_2 Pin=LED4-2
+Added Pin To Net: NetName=NetLED4_2 Pin=U2-4
+Added Net: Name=NetLED4_2
+Added Pin To Net: NetName=NetLED4_3 Pin=LED4-3
+Added Pin To Net: NetName=NetLED4_3 Pin=U5-4
+Added Net: Name=NetLED4_3
+Added Pin To Net: NetName=NetLED5_1 Pin=LED5-1
+Added Pin To Net: NetName=NetLED5_1 Pin=U4-3
+Added Net: Name=NetLED5_1
+Added Pin To Net: NetName=NetLED5_2 Pin=LED5-2
+Added Pin To Net: NetName=NetLED5_2 Pin=U2-3
+Added Net: Name=NetLED5_2
+Added Pin To Net: NetName=NetLED5_3 Pin=LED5-3
+Added Pin To Net: NetName=NetLED5_3 Pin=U5-3
+Added Net: Name=NetLED5_3
+Added Pin To Net: NetName=NetLED6_1 Pin=LED6-1
+Added Pin To Net: NetName=NetLED6_1 Pin=U4-2
+Added Net: Name=NetLED6_1
+Added Pin To Net: NetName=NetLED6_2 Pin=LED6-2
+Added Pin To Net: NetName=NetLED6_2 Pin=U2-2
+Added Net: Name=NetLED6_2
+Added Pin To Net: NetName=NetLED6_3 Pin=LED6-3
+Added Pin To Net: NetName=NetLED6_3 Pin=U5-2
+Added Net: Name=NetLED6_3
+Added Pin To Net: NetName=NetLED7_1 Pin=LED7-1
+Added Pin To Net: NetName=NetLED7_1 Pin=U4-1
+Added Net: Name=NetLED7_1
+Added Pin To Net: NetName=NetLED7_2 Pin=LED7-2
+Added Pin To Net: NetName=NetLED7_2 Pin=U2-1
+Added Net: Name=NetLED7_2
+Added Pin To Net: NetName=NetLED7_3 Pin=LED7-3
+Added Pin To Net: NetName=NetLED7_3 Pin=U5-1
+Added Net: Name=NetLED7_3
+Added Pin To Net: NetName=NetLED8_1 Pin=LED8-1
+Added Pin To Net: NetName=NetLED8_1 Pin=U4-15
+Added Net: Name=NetLED8_1
+Added Pin To Net: NetName=NetLED8_2 Pin=LED8-2
+Added Pin To Net: NetName=NetLED8_2 Pin=U2-15
+Added Net: Name=NetLED8_2
+Added Pin To Net: NetName=NetLED8_3 Pin=LED8-3
+Added Pin To Net: NetName=NetLED8_3 Pin=U5-15
+Added Net: Name=NetLED8_3
+Added Pin To Net: NetName=NetLED9_1 Pin=LED9-1
+Added Pin To Net: NetName=NetLED9_1 Pin=U8-7
+Added Net: Name=NetLED9_1
+Added Pin To Net: NetName=NetLED9_2 Pin=LED9-2
+Added Pin To Net: NetName=NetLED9_2 Pin=U7-7
+Added Net: Name=NetLED9_2
+Added Pin To Net: NetName=NetLED9_3 Pin=LED9-3
+Added Pin To Net: NetName=NetLED9_3 Pin=U9-7
+Added Net: Name=NetLED9_3
+Added Pin To Net: NetName=NetLED10_1 Pin=LED10-1
+Added Pin To Net: NetName=NetLED10_1 Pin=U8-6
+Added Net: Name=NetLED10_1
+Added Pin To Net: NetName=NetLED10_2 Pin=LED10-2
+Added Pin To Net: NetName=NetLED10_2 Pin=U7-6
+Added Net: Name=NetLED10_2
+Added Pin To Net: NetName=NetLED10_3 Pin=LED10-3
+Added Pin To Net: NetName=NetLED10_3 Pin=U9-6
+Added Net: Name=NetLED10_3
+Added Pin To Net: NetName=NetLED11_1 Pin=LED11-1
+Added Pin To Net: NetName=NetLED11_1 Pin=U8-5
+Added Net: Name=NetLED11_1
+Added Pin To Net: NetName=NetLED11_2 Pin=LED11-2
+Added Pin To Net: NetName=NetLED11_2 Pin=U7-5
+Added Net: Name=NetLED11_2
+Added Pin To Net: NetName=NetLED11_3 Pin=LED11-3
+Added Pin To Net: NetName=NetLED11_3 Pin=U9-5
+Added Net: Name=NetLED11_3
+Added Pin To Net: NetName=NetLED12_1 Pin=LED12-1
+Added Pin To Net: NetName=NetLED12_1 Pin=U8-4
+Added Net: Name=NetLED12_1
+Added Pin To Net: NetName=NetLED12_2 Pin=LED12-2
+Added Pin To Net: NetName=NetLED12_2 Pin=U7-4
+Added Net: Name=NetLED12_2
+Added Pin To Net: NetName=NetLED12_3 Pin=LED12-3
+Added Pin To Net: NetName=NetLED12_3 Pin=U9-4
+Added Net: Name=NetLED12_3
+Added Pin To Net: NetName=NetLED13_1 Pin=LED13-1
+Added Pin To Net: NetName=NetLED13_1 Pin=U8-3
+Added Net: Name=NetLED13_1
+Added Pin To Net: NetName=NetLED13_2 Pin=LED13-2
+Added Pin To Net: NetName=NetLED13_2 Pin=U7-3
+Added Net: Name=NetLED13_2
+Added Pin To Net: NetName=NetLED13_3 Pin=LED13-3
+Added Pin To Net: NetName=NetLED13_3 Pin=U9-3
+Added Net: Name=NetLED13_3
+Added Pin To Net: NetName=NetLED14_1 Pin=LED14-1
+Added Pin To Net: NetName=NetLED14_1 Pin=U8-2
+Added Net: Name=NetLED14_1
+Added Pin To Net: NetName=NetLED14_2 Pin=LED14-2
+Added Pin To Net: NetName=NetLED14_2 Pin=U7-2
+Added Net: Name=NetLED14_2
+Added Pin To Net: NetName=NetLED14_3 Pin=LED14-3
+Added Pin To Net: NetName=NetLED14_3 Pin=U9-2
+Added Net: Name=NetLED14_3
+Added Pin To Net: NetName=NetLED15_1 Pin=LED15-1
+Added Pin To Net: NetName=NetLED15_1 Pin=U8-1
+Added Net: Name=NetLED15_1
+Added Pin To Net: NetName=NetLED15_2 Pin=LED15-2
+Added Pin To Net: NetName=NetLED15_2 Pin=U7-1
+Added Net: Name=NetLED15_2
+Added Pin To Net: NetName=NetLED15_3 Pin=LED15-3
+Added Pin To Net: NetName=NetLED15_3 Pin=U9-1
+Added Net: Name=NetLED15_3
+Added Pin To Net: NetName=NetLED16_1 Pin=LED16-1
+Added Pin To Net: NetName=NetLED16_1 Pin=U8-15
+Added Net: Name=NetLED16_1
+Added Pin To Net: NetName=NetLED16_2 Pin=LED16-2
+Added Pin To Net: NetName=NetLED16_2 Pin=U7-15
+Added Net: Name=NetLED16_2
+Added Pin To Net: NetName=NetLED16_3 Pin=LED16-3
+Added Pin To Net: NetName=NetLED16_3 Pin=U9-15
+Added Net: Name=NetLED16_3
+Added Pin To Net: NetName=NetU2_10 Pin=U2-10
+Added Pin To Net: NetName=NetU2_10 Pin=U4-10
+Added Pin To Net: NetName=NetU2_10 Pin=U5-10
+Added Pin To Net: NetName=NetU2_10 Pin=U7-10
+Added Pin To Net: NetName=NetU2_10 Pin=U8-10
+Added Pin To Net: NetName=NetU2_10 Pin=U9-10
+Added Net: Name=NetU2_10
+Added Member To Class: ClassName=SCH1.1 Member=Component C6 Cap Semi
+Added Member To Class: ClassName=SCH1.1 Member=Component LED1 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED2 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED3 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED4 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED5 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED6 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED7 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED8 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED9 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED10 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED11 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED12 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED13 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED14 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED15 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component LED16 or 5050 LEDs, the order of the LEDs may vary from one manufacturer to another!
+Added Member To Class: ClassName=SCH1.1 Member=Component U6 PIC16F887-E/PT
+Added Room: Name=SCH1.1

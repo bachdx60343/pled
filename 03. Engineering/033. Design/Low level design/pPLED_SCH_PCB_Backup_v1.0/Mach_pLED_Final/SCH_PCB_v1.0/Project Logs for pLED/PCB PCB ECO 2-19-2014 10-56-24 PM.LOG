@@ -1,0 +1,9 @@
+Removed Pin From Net: NetName=GND Pin=Bat1-2
+Removed Member From Class: ClassName=SCH Member=Bat1
+Added Component: Designator=*(Jac_Pin)
+Added Pin To Net: NetName=Net*_3 Pin=C3-1
+Added Pin To Net: NetName=Net*_3 Pin=U2-3
+Added Net: Name=Net*_3
+Added Member To Class: ClassName=SCH Member=Component * Jac_Pin
+Added Member To Class: ClassName=SCH Member=Component Y2 20MHz
+Added Room: Name=SCH

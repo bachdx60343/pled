@@ -1,0 +1,75 @@
+Removed Pin From Net: NetName=GND Pin=C6-1
+Removed Pin From Net: NetName=5V Pin=C6-2
+Removed Pin From Net: NetName=RX Pin=U6-1
+Removed Pin From Net: NetName=GND Pin=U6-6
+Removed Pin From Net: NetName=5V Pin=U6-7
+Removed Pin From Net: NetName=SQW Pin=U6-8
+Removed Pin From Net: NetName=NetRF1_1 Pin=U6-10
+Removed Pin From Net: NetName=NetRF1_2 Pin=U6-11
+Removed Pin From Net: NetName=NetRF1_3 Pin=U6-14
+Removed Pin From Net: NetName=NetRF1_4 Pin=U6-15
+Removed Pin From Net: NetName=PGC Pin=U6-16
+Removed Pin From Net: NetName=PGD Pin=U6-17
+Removed Pin From Net: NetName=MCLR Pin=U6-18
+Removed Pin From Net: NetName=LED_G0 Pin=U6-19
+Removed Pin From Net: NetName=VIN+ Pin=U6-21
+Removed Pin From Net: NetName=DO Pin=U6-25
+Removed Pin From Net: NetName=ENABLE Pin=U6-26
+Removed Pin From Net: NetName=CLOCK Pin=U6-27
+Removed Pin From Net: NetName=5V Pin=U6-28
+Removed Pin From Net: NetName=GND Pin=U6-29
+Removed Pin From Net: NetName=NetC8_2 Pin=U6-30
+Removed Pin From Net: NetName=NetC7_2 Pin=U6-31
+Removed Pin From Net: NetName=SIGHALL Pin=U6-36
+Removed Pin From Net: NetName=SCL Pin=U6-37
+Removed Pin From Net: NetName=SDA Pin=U6-42
+Removed Pin From Net: NetName=TX Pin=U6-44
+Change Component Footprint: Designator=Bat1 Old Footprint=BAT-2 New Footprint=Jac_Pin
+Change Component Footprint: Designator=C1 Old Footprint=C1206 New Footprint=CAP POL 2
+Change Component Footprint: Designator=C4 Old Footprint=C1206 New Footprint=SM/C_0805
+Change Component Footprint: Designator=C5 Old Footprint=C1206 New Footprint=SM/C_0805
+Change Component Footprint: Designator=C7 Old Footprint=C1206 New Footprint=SM/C_0805
+Change Component Footprint: Designator=C8 Old Footprint=C1206 New Footprint=SM/C_0805
+Change Component Footprint: Designator=C9 Old Footprint=C1206 New Footprint=SM/C_0805
+Change Component Footprint: Designator=C3 Old Footprint=CAP POL 2 New Footprint=SM/C_0805
+Change Component Footprint: Designator=Y2 Old Footprint=CFPX-93 New Footprint=CRYSTAL
+Change Component Footprint: Designator=R1 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Change Component Footprint: Designator=R2 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Change Component Footprint: Designator=R3 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Change Component Footprint: Designator=R4 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Change Component Footprint: Designator=R5 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Change Component Footprint: Designator=R6 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Change Component Footprint: Designator=R7 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Change Component Footprint: Designator=R8 Old Footprint=J1-0603 New Footprint=SM/C_0805
+Added Component: Designator=C6(C1206)
+Added Component: Designator=U6(TQFP-PT44_N)
+Added Pin To Net: NetName=GND Pin=C6-1
+Added Pin To Net: NetName=5V Pin=C6-2
+Added Pin To Net: NetName=RX Pin=U6-1
+Added Pin To Net: NetName=GND Pin=U6-6
+Added Pin To Net: NetName=5V Pin=U6-7
+Added Pin To Net: NetName=SQW Pin=U6-8
+Added Pin To Net: NetName=NetRF1_1 Pin=U6-10
+Added Pin To Net: NetName=NetRF1_2 Pin=U6-11
+Added Pin To Net: NetName=NetRF1_3 Pin=U6-14
+Added Pin To Net: NetName=NetRF1_4 Pin=U6-15
+Added Pin To Net: NetName=PGC Pin=U6-16
+Added Pin To Net: NetName=PGD Pin=U6-17
+Added Pin To Net: NetName=MCLR Pin=U6-18
+Added Pin To Net: NetName=LED_G0 Pin=U6-19
+Added Pin To Net: NetName=VIN+ Pin=U6-21
+Added Pin To Net: NetName=DO Pin=U6-25
+Added Pin To Net: NetName=ENABLE Pin=U6-26
+Added Pin To Net: NetName=CLOCK Pin=U6-27
+Added Pin To Net: NetName=5V Pin=U6-28
+Added Pin To Net: NetName=GND Pin=U6-29
+Added Pin To Net: NetName=NetC8_2 Pin=U6-30
+Added Pin To Net: NetName=NetC7_2 Pin=U6-31
+Added Pin To Net: NetName=SIGHALL Pin=U6-36
+Added Pin To Net: NetName=SCL Pin=U6-37
+Added Pin To Net: NetName=SDA Pin=U6-42
+Added Pin To Net: NetName=TX Pin=U6-44
+Added Member To Class: ClassName=SCH1.1 Member=Component C6 Cap Semi
+Added Member To Class: ClassName=SCH1.1 Member=Component D11 Diode 1N4148
+Added Member To Class: ClassName=SCH1.1 Member=Component D12 Diode 1N4148
+Added Member To Class: ClassName=SCH1.1 Member=Component U6 PIC16F887-E/PT
