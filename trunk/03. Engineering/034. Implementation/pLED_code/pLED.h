@@ -32,7 +32,6 @@
 #OPT 1
 
 #define MAX_SECTION 60
-#define MODE_S 1
 #define MODE_A 2
 #define MODE_B 3
 #define MODE_C 4

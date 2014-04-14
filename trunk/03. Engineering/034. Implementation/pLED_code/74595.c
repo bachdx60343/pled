@@ -61,12 +61,6 @@ void latch_write(int16 blue, int16 red, int16 green)
 	output_high(EXP_OUT_ENABLE);
 	output_low(EXP_OUT_ENABLE);
 }
-//#INLINE
-void latch_enable()
-{
-	output_high(EXP_OUT_ENABLE);
-	output_low(EXP_OUT_ENABLE);
-}
 
 #INLINE
 void latch_ClearAll()

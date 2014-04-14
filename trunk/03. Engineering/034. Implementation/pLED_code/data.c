@@ -194,7 +194,7 @@ void fetch_data()
 			else if(pcount > 3) rgb_bits.green = pled_inward[pcount];
 			else
 			{
-				rgb_bits.blue = pled_inward[pcount];
+				rgb_bits.red = pled_inward[pcount];
 				rgb_bits.green = pled_inward[pcount];
 			}
 		}

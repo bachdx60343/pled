@@ -27,10 +27,10 @@ Type=4
 4=24256.c
 5=74595.c
 6=ds1307.c
-7=..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
-8=test_case.c
-9=pLED.lst
-10=pLED.sta
+7=test_case.c
+8=pLED.lst
+9=pLED.sta
+10=
 11=
 [pLED.c]
 Type=4
