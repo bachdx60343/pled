@@ -65,6 +65,8 @@ void  RB_isr(void)
       if (pled_direction == 1)
       	pled_direction = -1;
       else if (pled_direction == -1)
+      	pled_direction = 0;
+      else if (pled_direction == 0)
       	pled_direction = 1;
    }
 }
