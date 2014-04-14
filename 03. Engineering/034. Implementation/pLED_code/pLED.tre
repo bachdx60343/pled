@@ -1,5 +1,5 @@
-ÀÄpLED
-   ÃÄMAIN  2/1724  Ram=2
+ÀÄ03
+   ÃÄMAIN  2/1715  Ram=2
    ³  ÃÄ@cinit1  (Inline)  Ram=0
    ³  ÃÄvar_init  0/26  Ram=0
    ³  ÃÄds1307_init  0/266  Ram=1
@@ -65,9 +65,6 @@
    ³  ³  ÃÄ@I2C_WRITE_2  0/92  Ram=1
    ³  ³  ÃÄbin2bcd  0/194  Ram=20
    ³  ³  ÀÄ@I2C_WRITE_2  0/92  Ram=1
-   ³  ÃÄ@PSTRINGC7_621  0/90  Ram=4
-   ³  ³  ÃÄ@PUTCHAR_BIU_1  0/24  Ram=2
-   ³  ³  ÀÄ@PUTCHAR_BIU_1  0/24  Ram=2
    ³  ÃÄ@PUTCHAR_BIU_1  0/24  Ram=2
    ³  ÃÄ@PUTCHAR_BIU_1  0/24  Ram=2
    ³  ÃÄlatch_ClearAll  (Inline)  Ram=1
@@ -186,9 +183,9 @@
    ³  ÃÄlatch_write  (Inline)  Ram=7
    ³  ÀÄlatch_ClearAll  (Inline)  Ram=1
    ÃÄEXT_isr  0/7  Ram=0
-   ÃÄRB_isr  0/42  Ram=1
+   ÃÄRB_isr  0/54  Ram=1
    ÃÄRDA_isr  0/106  Ram=0
    ÃÄTIMER1_isr  0/5  Ram=0
-   ÃÄCCP1_isr  0/123  Ram=4
+   ÃÄCCP1_isr  0/111  Ram=4
    ³  ÀÄ@MUL3232  (Inline)  Ram=13
    ÀÄTIMER0_isr  0/6  Ram=0
