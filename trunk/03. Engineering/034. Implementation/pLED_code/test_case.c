@@ -58,8 +58,7 @@
 					set_timer0(section_timer);
 					latch_write(rgb_bits.blue, rgb_bits.red, rgb_bits.green);
 					//delay_us(100);
-					latch_ClearAll();
-				  	
+					latch_ClearAll();		  	
 					section_trigger = 0;
 					section_count++;
 				}

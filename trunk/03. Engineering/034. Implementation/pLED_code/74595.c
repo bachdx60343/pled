@@ -77,7 +77,7 @@ void latch_ClearAll()
 	output_high(EXP_OUT_ENABLE);
    output_low(EXP_OUT_ENABLE);
 }
-//#INLINE
+
 void latch_SetAll()
 {
 	BYTE i;
@@ -92,3 +92,4 @@ void latch_SetAll()
 	output_high(EXP_OUT_ENABLE);
    output_low(EXP_OUT_ENABLE);
 }
+

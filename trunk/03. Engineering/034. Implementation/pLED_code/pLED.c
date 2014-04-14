@@ -43,26 +43,25 @@ void  RB_isr(void)
    if(bit_test(changes, 2))
    {
       mode = MODE_A;
-      tuning = 6;
-      circle_trigger = 0;
+      smode = 0;
    }
    if(bit_test(changes, 3))
    {
       mode = MODE_B;
-      tuning = 7;
-      circle_trigger = 0;
+      smode = 0;
    }
    if(bit_test(changes, 4))
    {
       mode = MODE_C;
-      tuning = 7;
-      circle_trigger = 0;
+      if (smode == 1)
+      	smode = 0;
+      else if (smode == 0)
+      	smode = 1;
    }
    if(bit_test(changes, 5))
    {
       mode = MODE_D;
-      circle_trigger = 0;
-      tuning = 6;
+      smode = 0;
       if (pled_direction == 1)
       	pled_direction = -1;
       else if (pled_direction == -1)
@@ -152,6 +151,7 @@ void var_init()
    last_b = port_b;
    tuning = 6;
    mode = MODE_A;
+   smode = 0;
    tick = 1;
    digit_sec = 0;
    pled_position = 31;
@@ -215,7 +215,9 @@ void main()
    		rs232_status = 0;
    	   ds1307_set_date_time(day, month, year, dow, hour, min, sec);
    	   putc('O');
+   	   delay_ms(100);
    	   putc('K');
+   	   delay_ms(100);
 		   latch_ClearAll();
    	}
    	// get the time value from ds1307 after each 5 minutes
@@ -264,7 +266,7 @@ void main()
 					section_trigger = 0;
 					fetch_data();
 					latch_write(rgb_bits.blue, rgb_bits.red, rgb_bits.green);
-					if(section_count > 1) latch_ClearAll();
+					if (smode == 0 && section_count > 1) latch_ClearAll();
 					section_count--;
 				}
 			}
