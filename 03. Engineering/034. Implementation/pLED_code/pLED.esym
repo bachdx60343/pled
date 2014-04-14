@@ -1,8 +1,8 @@
 D G "RTC_SCL" 5 19 "PIN_C3"
-D G "__PCM__" 0 276 ""5.015""
-D G "__DEVICE__" 0 276 "887"
-D G "__DATE__" 0 276 ""14-Apr-14""
-D G "__TIME__" 0 276 ""15:52:38"" "===========================================================================||"
+D G "__PCM__" 0 278 ""5.015""
+D G "__DEVICE__" 0 278 "887"
+D G "__DATE__" 0 278 ""14-Apr-14""
+D G "__TIME__" 0 278 ""18:40:25"" "===========================================================================||"
 c L "set_tris_a" 2 1 6 "FUNCTION"
 v L "value" 2 39 "int8" `54 
 f B "set_tris_a" 2 39 "void(int8 value)" `53 
@@ -865,75 +865,75 @@ V G "section_timer" 1 47 "int16" `629
 V G "tuning" 1 48 "sint8" `630  "variables for RB interrupt, RF input"
 V G "port_b" 1 50 "int8" `631 
 V G "last_b" 1 50 "int8" `632 
-V G "mode" 1 51 "int8" `633  "variables for date, time values"
-V G "day" 1 53 "int8" `634 
-V G "month" 1 53 "int8" `635 
-V G "year" 1 53 "int8" `636 
-V G "dow" 1 53 "int8" `637 
-V G "hour" 1 54 "int8" `638 
-V G "min" 1 54 "int8" `639 
-V G "sec" 1 54 "int8" `640 
-V G "tick" 1 55 "int8" `641 
-V G "digit_sec" 1 55 "int8" `642  "variables for digital clock"
-V G "hour_h" 1 57 "int8" `643 
-V G "hour_l" 1 57 "int8" `644 
-V G "min_h" 1 57 "int8" `645 
-V G "min_l" 1 57 "int8" `646 
-V G "anal_hour" 1 57 "int8" `647 
-V G "day_h" 1 58 "int8" `648 
-V G "day_l" 1 58 "int8" `649 
-V G "month_h" 1 58 "int8" `650 
-V G "month_l" 1 58 "int8" `651  "variables for MODE_D, running letters"
-V G "pled_position" 1 60 "int8" `652 
-V G "pled_direction" 1 61 "sint8" `653 
-V G "pled_count" 1 62 "int16" `654 
-V G "rc" 1 63 "int8" `655 
-V G "rs232_status" 1 63 "int8" `656  "leds' values at one moment"
-V G "rgb_bits" 1 71 "{int16 blue,int16 red,int16 green}" `661  "number to display at upper position (hour-minute)"
-V G "number_upper" 1 74 "[10][3]" `662 
+V G "mode" 1 51 "int8" `633 
+V G "smode" 1 51 "int8" `634  "variables for date, time values"
+V G "day" 1 53 "int8" `635 
+V G "month" 1 53 "int8" `636 
+V G "year" 1 53 "int8" `637 
+V G "dow" 1 53 "int8" `638 
+V G "hour" 1 54 "int8" `639 
+V G "min" 1 54 "int8" `640 
+V G "sec" 1 54 "int8" `641 
+V G "tick" 1 55 "int8" `642 
+V G "digit_sec" 1 55 "int8" `643  "variables for digital clock"
+V G "hour_h" 1 57 "int8" `644 
+V G "hour_l" 1 57 "int8" `645 
+V G "min_h" 1 57 "int8" `646 
+V G "min_l" 1 57 "int8" `647 
+V G "anal_hour" 1 57 "int8" `648 
+V G "day_h" 1 58 "int8" `649 
+V G "day_l" 1 58 "int8" `650 
+V G "month_h" 1 58 "int8" `651 
+V G "month_l" 1 58 "int8" `652  "variables for MODE_D, running letters"
+V G "pled_position" 1 60 "int8" `653 
+V G "pled_direction" 1 61 "sint8" `654 
+V G "pled_count" 1 62 "int16" `655  "variables for RS232 communication"
+V G "rc" 1 64 "int8" `656 
+V G "rs232_status" 1 64 "int8" `657  "leds' values at one moment"
+V G "rgb_bits" 1 72 "{int16 blue,int16 red,int16 green}" `662  "number to display at upper position (hour-minute)"
+V G "number_upper" 1 75 "[10][3]" `663 
 C L "jump_to_irs" 1 26 1 "FUNCTION"
-V G "number_lower" 1 88 "[10][3]" `666 
+V G "number_lower" 1 89 "[10][3]" `667 
 C L "jump_to_irs" 1 26 1 "FUNCTION"
-V G "fpt" 1 103 "[180]" `670 
+V G "fpt" 1 104 "[180]" `671 
 C L "jump_to_irs" 1 26 1 "FUNCTION"
-V G "pled_inward" 1 138 "[15]" `673 
+V G "pled_inward" 1 139 "[15]" `674 
 D G "EEPROM_SDA" 3 26 "PIN_C4"
 D G "EEPROM_SCL" 3 27 "PIN_C3"
 D G "EEPROM_ADDRESS" 3 33 "long int"
 D G "EEPROM_SIZE" 3 34 "32768"
-F G "init_ext_eeprom" 3 37 "void()" `681 
-V L "address" 3 44 "int16" `683 
-V L "data" 3 44 "int8" `684 
-F G "write_ext_eeprom" 3 45 "void(int16 address,int8 data)" `682 
-V L "status" 3 46 "int1" `685 
-V L "address" 3 64 "int16" `687 
-F G "read_ext_eeprom" 3 64 "int8(int16 address)" `686 
-V L "data" 3 65 "int8" `688 
+F G "init_ext_eeprom" 3 37 "void()" `682 
+V L "address" 3 44 "int16" `684 
+V L "data" 3 44 "int8" `685 
+F G "write_ext_eeprom" 3 45 "void(int16 address,int8 data)" `683 
+V L "status" 3 46 "int1" `686 
+V L "address" 3 64 "int16" `688 
+F G "read_ext_eeprom" 3 64 "int8(int16 address)" `687 
+V L "data" 3 65 "int8" `689 
 D G "EXP_OUT_ENABLE" 4 17 "PIN_E2"
 D G "EXP_OUT_CLOCK" 4 18 "PIN_E1"
 D G "EXP_OUT_DO" 4 19 "PIN_E0"
 D G "NUMBER_OF_74595" 4 20 "6"
-V L "blue" 4 25 "int16" `690 
-V L "red" 4 25 "int16" `691 
-V L "green" 4 25 "int16" `692 
-F G "latch_write" 4 26 "void(int16 blue,int16 red,int16 green)" `689 
-V L "i" 4 27 "int8" `693 
+V L "blue" 4 25 "int16" `691 
+V L "red" 4 25 "int16" `692 
+V L "green" 4 25 "int16" `693 
+F G "latch_write" 4 26 "void(int16 blue,int16 red,int16 green)" `690 
+V L "i" 4 27 "int8" `694 
 C L "latch_write" 4 1 1 "FUNCTION"
 C L "latch_write" 4 1 1 "FUNCTION"
 C L "latch_write" 4 1 1 "FUNCTION"
-F G "latch_ClearAll" 4 67 "void()" `694 
-V L "i" 4 68 "int8" `695 
-C L "latch_SetAll" 4 1 1 "FUNCTION"
-F G "latch_SetAll" 4 82 "void()" `696 
-V L "i" 4 83 "int8" `697 
+F G "latch_ClearAll" 4 67 "void()" `695 
+V L "i" 4 68 "int8" `696 
+F G "latch_SetAll" 4 82 "void()" `697 
+V L "i" 4 83 "int8" `698 
 D G "RTC_SDA" 5 18 "PIN_C4"
 D G "RTC_SCL" 5 19 "PIN_C3"
-V L "bin_value" 5 23 "int8" `703 
-f G "bin2bcd" 5 23 "int8(int8 bin_value)" `702 
-V L "bcd_value" 5 24 "int8" `705 
-f G "bcd2bin" 5 24 "int8(int8 bcd_value)" `704 
-F G "ds1307_init" 5 27 "void()" `706 
-V L "byte0" 5 28 "int8" `707 
+V L "bin_value" 5 23 "int8" `704 
+f G "bin2bcd" 5 23 "int8(int8 bin_value)" `703 
+V L "bcd_value" 5 24 "int8" `706 
+f G "bcd2bin" 5 24 "int8(int8 bcd_value)" `705 
+F G "ds1307_init" 5 27 "void()" `707 
+V L "byte0" 5 28 "int8" `708 
 C L "ds1307_init" 5 1 1 "FUNCTION"
 C L "ds1307_init" 5 1 1 "FUNCTION"
 C L "ds1307_init" 5 1 1 "FUNCTION"
@@ -947,14 +947,14 @@ C L "ds1307_init" 5 1 1 "FUNCTION"
 C L "ds1307_init" 5 1 1 "FUNCTION"
 C L "ds1307_init" 5 1 1 "FUNCTION"
 C L "ds1307_init" 5 1 1 "FUNCTION"
-V L "day" 5 57 "int8" `709 
-V L "mth" 5 57 "int8" `710 
-V L "year" 5 57 "int8" `711 
-V L "dow" 5 57 "int8" `712 
-V L "hr" 5 57 "int8" `713 
-V L "min" 5 57 "int8" `714 
-V L "sec" 5 57 "int8" `715 
-F G "ds1307_set_date_time" 5 58 "void(int8 day,int8 mth,int8 year,int8 dow,int8 hr,int8 min,int8 sec)" `708 
+V L "day" 5 57 "int8" `710 
+V L "mth" 5 57 "int8" `711 
+V L "year" 5 57 "int8" `712 
+V L "dow" 5 57 "int8" `713 
+V L "hr" 5 57 "int8" `714 
+V L "min" 5 57 "int8" `715 
+V L "sec" 5 57 "int8" `716 
+F G "ds1307_set_date_time" 5 58 "void(int8 day,int8 mth,int8 year,int8 dow,int8 hr,int8 min,int8 sec)" `709 
 C L "ds1307_set_date_time" 5 1 1 "FUNCTION"
 C L "ds1307_set_date_time" 5 1 1 "FUNCTION"
 C L "ds1307_set_date_time" 5 1 1 "FUNCTION"
@@ -966,48 +966,45 @@ C L "ds1307_set_date_time" 5 1 1 "FUNCTION"
 C L "ds1307_set_date_time" 5 1 1 "FUNCTION"
 C L "ds1307_set_date_time" 5 1 1 "FUNCTION"
 C L "ds1307_set_date_time" 5 1 2 "FUNCTION"
-V L "day" 5 76 "int8" `717 
-V L "mth" 5 76 "int8" `718 
-V L "year" 5 76 "int8" `719 
-V L "dow" 5 76 "int8" `720 
-F G "ds1307_get_date" 5 77 "void(int8 day,int8 mth,int8 year,int8 dow)" `716 
+V L "day" 5 76 "int8" `718 
+V L "mth" 5 76 "int8" `719 
+V L "year" 5 76 "int8" `720 
+V L "dow" 5 76 "int8" `721 
+F G "ds1307_get_date" 5 77 "void(int8 day,int8 mth,int8 year,int8 dow)" `717 
 C L "ds1307_get_date" 5 1 1 "FUNCTION"
 C L "ds1307_get_date" 5 1 1 "FUNCTION"
 C L "ds1307_get_date" 5 1 1 "FUNCTION"
 C L "ds1307_get_date" 5 1 1 "FUNCTION"
 C L "ds1307_get_date" 5 1 1 "FUNCTION"
 C L "ds1307_get_date" 5 1 1 "FUNCTION"
-V L "hr" 5 90 "int8" `722 
-V L "min" 5 90 "int8" `723 
-V L "sec" 5 90 "int8" `724 
-F G "ds1307_get_time" 5 91 "void(int8 hr,int8 min,int8 sec)" `721 
+V L "hr" 5 90 "int8" `723 
+V L "min" 5 90 "int8" `724 
+V L "sec" 5 90 "int8" `725 
+F G "ds1307_get_time" 5 91 "void(int8 hr,int8 min,int8 sec)" `722 
 C L "ds1307_get_time" 5 1 1 "FUNCTION"
 C L "ds1307_get_time" 5 1 1 "FUNCTION"
 C L "ds1307_get_time" 5 1 1 "FUNCTION"
 C L "ds1307_get_time" 5 1 1 "FUNCTION"
 C L "ds1307_get_time" 5 1 1 "FUNCTION"
 C L "bin2bcd" 5 1 1 "FUNCTION"
-V L "bin_value" 5 105 "int8" `726 
-F G "bin2bcd" 5 106 "int8(int8 bin_value)" `702 
-V L "dabble" 5 107 "int32" `725 
-V L "hyaku" 5 108 "int8" `726 
-V L "juu" 5 108 "int8" `727 
-V L "ichi" 5 108 "int8" `728 
-V L "i" 5 109 "int8" `729 
+V L "bin_value" 5 105 "int8" `727 
+F G "bin2bcd" 5 106 "int8(int8 bin_value)" `703 
+V L "dabble" 5 107 "int32" `726 
+V L "hyaku" 5 108 "int8" `727 
+V L "juu" 5 108 "int8" `728 
+V L "ichi" 5 108 "int8" `729 
+V L "i" 5 109 "int8" `730 
 C L "bcd2bin" 5 1 1 "FUNCTION"
-V L "bcd_value" 5 130 "int8" `731 
-F G "bcd2bin" 5 131 "int8(int8 bcd_value)" `704 
-V L "temp" 5 132 "int8" `730 
+V L "bcd_value" 5 130 "int8" `732 
+F G "bcd2bin" 5 131 "int8(int8 bcd_value)" `705 
+V L "temp" 5 132 "int8" `731 
 C L "bcd2bin" 5 1 1 "FUNCTION"
 C L "bcd2bin" 5 1 1 "FUNCTION"
 C L "fetch_data" 6 1 13 "FUNCTION"
-F G "fetch_data" 6 21 "void()" `731 
+F G "fetch_data" 6 21 "void()" `732 
 C L "fetch_data" 6 1 1 "FUNCTION"
 C L "fetch_data" 6 1 1 "FUNCTION"
-V L "pos" 6 25 "int8" `732 
-C L "fetch_data" 6 1 1 "FUNCTION"
-C L "fetch_data" 6 1 1 "FUNCTION"
-C L "fetch_data" 6 1 1 "FUNCTION"
+V L "pos" 6 25 "int8" `733 
 C L "fetch_data" 6 1 1 "FUNCTION"
 C L "fetch_data" 6 1 1 "FUNCTION"
 C L "fetch_data" 6 1 1 "FUNCTION"
@@ -1025,33 +1022,36 @@ C L "fetch_data" 6 1 1 "FUNCTION"
 C L "fetch_data" 6 1 1 "FUNCTION"
 C L "fetch_data" 6 1 1 "FUNCTION"
 C L "fetch_data" 6 1 1 "FUNCTION"
-V L "pcount" 6 183 "int8" `739 
-F G "EXT_isr" 0 31 "void()" `740 
-F G "RB_isr" 0 38 "void()" `741 
-V L "changes" 0 39 "int8" `742 
-F G "RDA_isr" 0 75 "void()" `743 
-C L "RDA_isr" 0 120 1 "FUNCTION"
-F G "TIMER1_isr" 0 127 "void()" `744 
-F G "CCP1_isr" 0 133 "void()" `745 
-F G "TIMER0_isr" 0 142 "void()" `749 
-F G "var_init" 0 147 "void()" `750 
-F G "MAIN" 0 164 "void()" `751  "initialize data"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 2 "FUNCTION"
-C L "MAIN" 0 120 2 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
-C L "MAIN" 0 120 1 "FUNCTION"
+C L "fetch_data" 6 1 1 "FUNCTION"
+C L "fetch_data" 6 1 1 "FUNCTION"
+C L "fetch_data" 6 1 1 "FUNCTION"
+V L "pcount" 6 187 "int8" `740 
+F G "EXT_isr" 0 31 "void()" `741 
+F G "RB_isr" 0 38 "void()" `742 
+V L "changes" 0 39 "int8" `743 
+F G "RDA_isr" 0 74 "void()" `744 
+C L "RDA_isr" 0 119 1 "FUNCTION"
+F G "TIMER1_isr" 0 126 "void()" `745 
+F G "CCP1_isr" 0 132 "void()" `746 
+F G "TIMER0_isr" 0 141 "void()" `750 
+F G "var_init" 0 146 "void()" `751 
+F G "MAIN" 0 164 "void()" `752  "initialize data"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 2 "FUNCTION"
+C L "MAIN" 0 119 2 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
+C L "MAIN" 0 119 1 "FUNCTION"
 F B "reset_cpu" 0 0
 F B "abs" 1 0
 F B "sleep_ulpwu" 1 0

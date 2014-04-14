@@ -60,6 +60,10 @@ void fetch_data()
 	else if(mode == MODE_C) // display an image - FPT logo
 	{
 		//the image data, which store information for entire circle, is an array
+		if (section_count == 16)
+		{
+		  section_count--;
+		}
 		rgb_bits.blue = fpt[section_count * 3 - 3];
 		rgb_bits.red = fpt[section_count * 3 - 2];
 		rgb_bits.green = fpt[section_count * 3 - 1];
@@ -115,7 +119,7 @@ void fetch_data()
 					rgb_bits.green = 0x00A0;
 				else
 					rgb_bits.green = 0x0000;
-				if(digit_sec == 31)
+				if(digit_sec > 30)
 					digit_sec = 0;
 				break;
 			//section 37-39: display the ten of day
