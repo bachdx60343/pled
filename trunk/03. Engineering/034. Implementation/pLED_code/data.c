@@ -184,13 +184,19 @@ void fetch_data()
 		rgb_bits.red = 0x0000;
 		rgb_bits.green = 0x0000;
 	  	
-		int pcount;
+		int8 pcount, ycount, year_position;
 		pcount = section_count - pled_position + 14;
-		if (pled_position < 15)
-			if (pcount >= 60)
-			{
-				pcount = pcount - 60;
-			}
+		if (pled_position < 31 ) year_position = pled_position + 30;
+		else year_position = pled_position - 30;
+		ycount = section_count - year_position + 14;
+		if (pcount >= 60)
+		{
+			pcount = pcount - 60;
+		}
+		if (ycount >= 60)
+		{
+			ycount = ycount - 60;
+		}
 		if (pcount >=0 && pcount < 15)
 		{
 			if(pcount > 11) rgb_bits.blue = pled_inward[pcount];
@@ -202,7 +208,23 @@ void fetch_data()
 				rgb_bits.green = pled_inward[pcount];
 			}
 		}
+		if (ycount >=0 && ycount < 15)
+		{
+			if(ycount > 11) rgb_bits.blue = year_2014[ycount];
+			else if(ycount > 7)
+			{
+				rgb_bits.blue = year_2014[ycount];
+				rgb_bits.green = year_2014[ycount];
+			}
+			else if(ycount > 3) rgb_bits.blue = year_2014[ycount];
+			else
+			{
+				rgb_bits.blue = year_2014[ycount];
+				rgb_bits.green = year_2014[ycount];
+			}
+		}
 	  	
+		//change text's position
 		pled_count++;
 		if (pled_count > 120)
 		{
