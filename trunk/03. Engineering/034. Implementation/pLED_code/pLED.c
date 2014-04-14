@@ -24,7 +24,6 @@
 #include "74595.c"
 #include "ds1307.c"
 #include "data.c"
-#include "stdlibm.h"
 
 #PRIORITY INT_CCP1, INT_TIMER0, INT_EXT, INT_RB
 

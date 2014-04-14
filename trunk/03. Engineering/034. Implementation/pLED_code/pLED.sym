@@ -1,8 +1,7 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004-005 @WRITE_PROGRAM_MEMORY8.P2
-004-005 @MEMSET.P3
-015     CCP_1_LOW
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 015     CCP_1
+015     CCP_1_LOW
 016     CCP_1_HIGH
 01B     CCP_2
 01B     CCP_2_LOW
@@ -54,75 +53,72 @@
 051     rs232_status
 052-057 rgb_bits
 058     @TRIS_C
-059-05A __DYNAMIC_HEAD
-05B     fetch_data.pos
-05B-05E @DIV3232.P1
-05B-05C latch_write.blue
-05B     ds1307_set_date_time.day
-05B     latch_ClearAll.i
-05B     ds1307_init.byte0
-05B     ds1307_get_date.@SCRATCH1
-05B     ds1307_get_time.@SCRATCH1
-05B     MAIN.@SCRATCH1
-05B     @PSTRINGC7_621.@SCRATCH1
-05C     fetch_data.pcount
-05C     ds1307_set_date_time.mth
-05C     MAIN.@SCRATCH2
-05C     @PSTRINGC7_621.@SCRATCH2
-05D     ds1307_set_date_time.year
-05D-05E latch_write.red
-05D     @DIV88.P1
-05D     @MUL88.P2
-05D     fetch_data.@SCRATCH1
-05D     @PSTRINGC7_621.@SCRATCH3
-05E     ds1307_set_date_time.dow
-05E     @DIV88.P1
-05E     @MUL88.P2
-05E     @PUTCHAR_BIU_1.P3
-05E     @PSTRINGC7_621.@SCRATCH4
-05F     @I2C_READ_2.P1
-05F-062 @DIV3232.P2
-05F-060 latch_write.green
-05F     ds1307_set_date_time.hr
-05F     @PUTCHAR_BIU_1.@SCRATCH1
-05F     @DIV88.@SCRATCH1
-060     ds1307_set_date_time.min
-060     bcd2bin.bcd_value
-060     @I2C_READ_2.@SCRATCH1
-061     bcd2bin.temp
-061     ds1307_set_date_time.sec
-061     latch_write.i
-061     @I2C_READ_2.@SCRATCH2
-062     bin2bcd.bin_value
-062     ds1307_set_date_time.@SCRATCH1
-062     bcd2bin.@SCRATCH1
-063-066 bin2bcd.dabble
-063     @I2C_WRITE_2.P1
-063     @DIV3232.@SCRATCH1
-064     @DIV3232.@SCRATCH2
-065     @DIV3232.@SCRATCH3
-066     @DIV3232.@SCRATCH4
-067     bin2bcd.hyaku
-067     @DIV3232.@SCRATCH5
-068     bin2bcd.juu
-069     bin2bcd.ichi
-06A     bin2bcd.i
-06B     bin2bcd.@SCRATCH1
-06C     bin2bcd.@SCRATCH2
-06D     bin2bcd.@SCRATCH3
-06E     bin2bcd.@SCRATCH4
-06F     bin2bcd.@SCRATCH5
-070     bin2bcd.@SCRATCH6
-071     bin2bcd.@SCRATCH7
-072     bin2bcd.@SCRATCH8
-073     bin2bcd.@SCRATCH9
-074     bin2bcd.@SCRATCH10
-075     bin2bcd.@SCRATCH11
-076     RB_isr.changes
+059     ds1307_init.byte0
+059-05A latch_write.blue
+059     ds1307_set_date_time.day
+059-05C @DIV3232.P1
+059     latch_ClearAll.i
+059     fetch_data.pos
+059     ds1307_get_date.@SCRATCH1
+059     ds1307_get_time.@SCRATCH1
+059     MAIN.@SCRATCH1
+059     @PSTRINGC7_621.@SCRATCH1
+05A     fetch_data.pcount
+05A     ds1307_set_date_time.mth
+05A     MAIN.@SCRATCH2
+05A     @PSTRINGC7_621.@SCRATCH2
+05B     @MUL88.P1
+05B     @DIV88.P2
+05B-05C latch_write.red
+05B     ds1307_set_date_time.year
+05B     fetch_data.@SCRATCH1
+05B     @PSTRINGC7_621.@SCRATCH3
+05C     @DIV88.P1
+05C     @PUTCHAR_BIU_1.P2
+05C     @MUL88.P3
+05C     ds1307_set_date_time.dow
+05C     @PSTRINGC7_621.@SCRATCH4
+05D-05E latch_write.green
+05D     @I2C_READ_2.P1
+05D     ds1307_set_date_time.hr
+05D-060 @DIV3232.P1
+05D     @PUTCHAR_BIU_1.@SCRATCH1
+05D     @DIV88.@SCRATCH1
+05E     bcd2bin.bcd_value
+05E     ds1307_set_date_time.min
+05E     @I2C_READ_2.@SCRATCH1
+05F     bcd2bin.temp
+05F     latch_write.i
+05F     ds1307_set_date_time.sec
+05F     @I2C_READ_2.@SCRATCH2
+060     bin2bcd.bin_value
+060     ds1307_set_date_time.@SCRATCH1
+060     bcd2bin.@SCRATCH1
+061-064 bin2bcd.dabble
+061     @I2C_WRITE_2.P1
+061     @DIV3232.@SCRATCH1
+062     @DIV3232.@SCRATCH2
+063     @DIV3232.@SCRATCH3
+064     @DIV3232.@SCRATCH4
+065     bin2bcd.hyaku
+065     @DIV3232.@SCRATCH5
+066     bin2bcd.juu
+067     bin2bcd.ichi
+068     bin2bcd.i
+069     bin2bcd.@SCRATCH1
+06A     bin2bcd.@SCRATCH2
+06B     bin2bcd.@SCRATCH3
+06C     bin2bcd.@SCRATCH4
+06D     bin2bcd.@SCRATCH5
+06E     bin2bcd.@SCRATCH6
+06F     bin2bcd.@SCRATCH7
+070     bin2bcd.@SCRATCH8
+071     bin2bcd.@SCRATCH9
+072     bin2bcd.@SCRATCH10
+073     bin2bcd.@SCRATCH11
+074     RB_isr.changes
 077     @SCRATCH
-077     @MEMSET.P1
 078     @SCRATCH
-078     @MEMSET.P1
 078     _RETURN_
 079     @SCRATCH
 07A     @SCRATCH
@@ -191,7 +187,7 @@ ROM Allocation:
 00032F  CCP1_isr
 000346  @MUL3232
 0003AA  TIMER0_isr
-0003B0  @const810.call
+0003B0  @const755.call
 0003B2  var_init
 0003CC  @I2C_WRITE_2
 000428  @I2C_READ_2
@@ -208,27 +204,24 @@ ROM Allocation:
 001000  @cinit1
 001000  MAIN
 001020  @cinit2
-00140B  ds1307_get_date
-0014DA  ds1307_get_time
-001628  latch_write
-0016A7  latch_ClearAll
+0013F2  ds1307_get_date
+0014C1  ds1307_get_time
+00160F  latch_write
+00168E  latch_ClearAll
 
 Project Directory:
     C:\Users\LongNT\Downloads\pLED_code\
 
 Project Files:
-    pLED.c                                                  [13-Apr-14 22:01  CRC=E216E9B7]
+    pLED.c                                                  [14-Apr-14 09:08  CRC=501B3BCE]
     pLED.h                                                  [13-Apr-14 21:46  CRC=B7F22BBA]
     ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h   [12-Nov-13 14:35  CRC=6CB1A611]
     24256.c                                                 [25-Mar-14 00:31  CRC=B3A819A6]
     74595.c                                                 [11-Apr-14 22:12  CRC=9D1B18D6]
     ds1307.c                                                [07-Apr-14 21:56  CRC=D8B7D5CB]
     data.c                                                  [13-Apr-14 20:06  CRC=F84D4F0D]
-    ..\..\..\..\Program Files (x86)\PICC\Drivers\stdlibm.h  [24-Feb-12 09:58  CRC=9523303D]
-    ..\..\..\..\Program Files (x86)\PICC\Drivers\stddef.h   [16-Jul-10 09:27  CRC=897CEC6C]
-    ..\..\..\..\Program Files (x86)\PICC\Drivers\memmgmt.c  [24-Feb-12 09:47  CRC=E82E24A3]
 
-Source signature=177F78C5
+Source signature=8ED4B3FA
 
 Units:
     pLED (main)
