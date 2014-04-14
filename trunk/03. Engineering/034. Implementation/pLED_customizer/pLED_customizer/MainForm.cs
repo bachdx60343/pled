@@ -28,6 +28,8 @@ namespace pLED_customizer
         private DataForm dtForm;
         private static float scale;
         private static byte[] rs232_data;
+        private delegate void data_Receive_Handler(String tx);
+        private static int rx_status;
 
         private void Initialize_panel_led()
         {
@@ -60,8 +62,11 @@ namespace pLED_customizer
             dtForm = new DataForm();
             rs232_data = new Byte[11];
 
-            System.Buffer.BlockCopy("S".ToCharArray(), 0, rs232_data, 0, 1);
-            System.Buffer.BlockCopy("T".ToCharArray(), 0, rs232_data, 1, 1);
+            rs232_data[0] = 83;
+            rs232_data[1] = 84;
+            rs232_data[9] = 69;
+            rs232_data[10] = 68;
+
             rs232_data[2] = 13;
             rs232_data[3] = 4;
             rs232_data[4] = 14;
@@ -69,8 +74,8 @@ namespace pLED_customizer
             rs232_data[6] = 19;
             rs232_data[7] = 52;
             rs232_data[8] = 29;
-            System.Buffer.BlockCopy("E".ToCharArray(), 0, rs232_data, 9, 1);
-            System.Buffer.BlockCopy("D".ToCharArray(), 0, rs232_data, 10, 1);
+
+            rx_status = 0;
         }
 
         private Brush getBrush(int resPos, int ledPos)
@@ -194,7 +199,6 @@ namespace pLED_customizer
             led_size.Width = sz.Width / 50;
             pad = sz.Height / 100;
             //hole = sz.Height * 6 / 500;
-            
         }
 
         private void button_data_Click(object sender, EventArgs e)
@@ -244,6 +248,13 @@ namespace pLED_customizer
                         }
                         g.FillEllipse(getBrush((int)(count / led_count), count % led_count), rt);
                     }
+                    else if (e.Button == System.Windows.Forms.MouseButtons.Right)
+                    {
+                        led_bits.Set(count * 3, false);
+                        led_bits.Set(count * 3 + 1, false);
+                        led_bits.Set(count * 3 + 2, false);
+                        g.FillEllipse(getBrush((int)(count / led_count), count % led_count), rt);
+                    }
                 }
                 count += 1;
             }
@@ -290,9 +301,8 @@ namespace pLED_customizer
                         led_bits.Set(count * 3, false);
                         led_bits.Set(count * 3 + 1, false);
                         led_bits.Set(count * 3 + 2, false);
-                        this.panel_led.Refresh();
+                        g.FillEllipse(getBrush((int)(count / led_count), count % led_count), rt);
                     }
-                    //break;
                 }
                 count += 1;
             }
@@ -312,35 +322,32 @@ namespace pLED_customizer
 
         private void button_Connect_Click(object sender, EventArgs e)
         {
-            this.comboBox_COM.Items.Clear();
-            foreach (string s in SerialPort.GetPortNames())
+            if (this.serialPort_PIC.IsOpen)
             {
-                this.comboBox_COM.Items.Add(s);
+                this.serialPort_PIC.Close();
             }
-
-            if (this.comboBox_COM.Items.Count > 0)
+            if (this.comboBox_COM.SelectedItem != null)
             {
-                if (this.serialPort_PIC.IsOpen)
+                this.serialPort_PIC.PortName = this.comboBox_COM.SelectedItem.ToString();
+                //this.serialPort_PIC.BaudRate = 19200;
+                //this.serialPort_PIC.DataBits = 8;
+                //this.serialPort_PIC.Parity = Parity.Even;
+                //this.serialPort_PIC.StopBits = StopBits.One;
+                //this.serialPort_PIC.Handshake = Handshake.None;
+                try
                 {
-                    this.comboBox_COM.SelectedItem = this.serialPort_PIC.PortName;
-                }
-                else
-                {
-                    this.comboBox_COM.SelectedIndex = 0;
-                }
-            }
-            if (!this.serialPort_PIC.IsOpen)
-            {
-                if (this.comboBox_COM.SelectedItem != null)
-                {
-                    this.serialPort_PIC.PortName = this.comboBox_COM.SelectedItem.ToString();
-                    this.serialPort_PIC.BaudRate = 19200;
-                    this.serialPort_PIC.DataBits = 8;
-                    this.serialPort_PIC.Parity = Parity.Even;
-                    this.serialPort_PIC.StopBits = StopBits.One;
-                    this.serialPort_PIC.Handshake = Handshake.None;
                     this.serialPort_PIC.Open();
+                    label_COMstatus.Text = serialPort_PIC.PortName + " connected";
                 }
+                catch (Exception)
+                {
+                    MessageBox.Show("An error occured. Cannot open port.");
+                    //throw;
+                }
+            }
+            else
+            {
+                this.label_COMstatus.Text = "not connected";
             }
         }
 
@@ -364,45 +371,128 @@ namespace pLED_customizer
             this.textBox_Time.Text = moment.Hour.ToString();
             this.textBox_Time.Text += ":" + moment.Minute.ToString();
             this.textBox_Time.Text += ":" + moment.Second.ToString();
-
-            Byte[] temp = new Byte[4];
-            temp = BitConverter.GetBytes(moment.Day);
-            rs232_data[2] = temp[0];
-            temp = BitConverter.GetBytes(moment.Month);
-            rs232_data[3] = temp[0];
-            temp = BitConverter.GetBytes(moment.Year - 2000);
-            rs232_data[4] = temp[0];
-            temp = BitConverter.GetBytes((Int32)moment.DayOfWeek + 1);
-            rs232_data[5] = temp[0];
-            temp = BitConverter.GetBytes(moment.Hour);
-            rs232_data[6] = temp[0];
-            temp = BitConverter.GetBytes(moment.Minute);
-            rs232_data[7] = temp[0];
-            temp = BitConverter.GetBytes(moment.Second);
-            rs232_data[8] = temp[0];
-
-            rs232_data[0] = 83;
-            rs232_data[1] = 84;
-            rs232_data[9] = 69;
-            rs232_data[10] = 68;
         }
 
         private void button_Update_Click(object sender, EventArgs e)
         {
             if (this.serialPort_PIC.IsOpen)
             {
-                this.serialPort_PIC.Write(rs232_data, 0, 11);
-                MessageBox.Show("Date, time data sent!");
+                System.DateTime moment = System.DateTime.Now;
+                Byte[] temp = new Byte[4];
+
+                temp = BitConverter.GetBytes(moment.Day);
+                rs232_data[2] = temp[0];
+                temp = BitConverter.GetBytes(moment.Month);
+                rs232_data[3] = temp[0];
+                temp = BitConverter.GetBytes(moment.Year - 2000);
+                rs232_data[4] = temp[0];
+                temp = BitConverter.GetBytes((Int32)moment.DayOfWeek + 1);
+                rs232_data[5] = temp[0];
+                temp = BitConverter.GetBytes(moment.Hour);
+                rs232_data[6] = temp[0];
+                temp = BitConverter.GetBytes(moment.Minute);
+                rs232_data[7] = temp[0];
+                temp = BitConverter.GetBytes(moment.Second);
+                rs232_data[8] = temp[0];
+
+                try
+                {
+                    this.serialPort_PIC.Write(rs232_data, 0, 11);
+                    //MessageBox.Show("Date, time's data sent: " + moment.ToString());
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("An error occured. Cannot send data.");
+                    //throw;
+                }
+            }
+        }
+
+        private void rs232_receive(String tx)
+        {
+            this.textBox_RunText.Text = tx;
+            if (tx == "O")
+            {
+                rx_status = 1;
+            }
+            else if (tx == "K" && rx_status == 1)
+            {
+                rx_status = 2;
+            }
+            if (tx.Contains("OK"))
+            {
+                rx_status = 2;
+            }
+            if (rx_status == 2)
+            {
+                rx_status = 0;
+                MessageBox.Show("Date, time updated successfully!");
             }
         }
 
         private void serialPort_PIC_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             String tx = serialPort_PIC.ReadExisting();
-            if (tx.Contains("OK"))
+            this.BeginInvoke(new data_Receive_Handler(rs232_receive), tx);
+        }
+
+        private void comboBox_COM_Click(object sender, EventArgs e)
+        {
+            this.comboBox_COM.Items.Clear();
+            foreach (string s in SerialPort.GetPortNames())
             {
-                MessageBox.Show("Date, time updated successfully!");
+                this.comboBox_COM.Items.Add(s);
             }
+
+            if (this.comboBox_COM.Items.Count > 0)
+            {
+                if (this.serialPort_PIC.IsOpen)
+                {
+                    this.comboBox_COM.SelectedItem = this.serialPort_PIC.PortName;
+                }
+                else
+                {
+                    this.comboBox_COM.SelectedIndex = 0;
+                }
+            }
+        }
+
+        private void button_Disconnect_Click(object sender, EventArgs e)
+        {
+            if (this.serialPort_PIC.IsOpen)
+            {
+                this.serialPort_PIC.Close();
+                label_COMstatus.Text = "not connected";
+            }
+        }
+
+        private void button_Save_Click(object sender, EventArgs e)
+        {
+            this.saveFileDialog.ShowDialog(this);
+        }
+
+        private void button_Load_Click(object sender, EventArgs e)
+        {
+            this.openFileDialog.ShowDialog(this);
+        }
+
+        private void saveFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            System.IO.Stream file = this.saveFileDialog.OpenFile();
+            Byte[] temp = new Byte[(led_count * 3 / 8) * resol];
+            led_bits.CopyTo(temp, 0);
+            file.Write(temp, 0, temp.Length);
+            file.Close();
+        }
+
+        private void openFileDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            System.IO.Stream file = this.openFileDialog.OpenFile();
+            Byte[] temp = new Byte[(led_count * 3 / 8) * resol];
+            file.Read(temp, 0, temp.Length);
+            file.Close();
+            led_bits = new System.Collections.BitArray(temp);
+            this.panel_led.Refresh();
         }
     }
 }

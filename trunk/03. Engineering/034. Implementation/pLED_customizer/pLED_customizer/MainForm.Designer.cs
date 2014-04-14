@@ -48,10 +48,18 @@
             this.groupBox_Led = new System.Windows.Forms.GroupBox();
             this.groupBox_DateTime = new System.Windows.Forms.GroupBox();
             this.timer_sec = new System.Windows.Forms.Timer(this.components);
+            this.groupBox_COM = new System.Windows.Forms.GroupBox();
+            this.label_COMstatus = new System.Windows.Forms.Label();
+            this.button_Disconnect = new System.Windows.Forms.Button();
+            this.button_Save = new System.Windows.Forms.Button();
+            this.button_Load = new System.Windows.Forms.Button();
+            this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.panel_led.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trackBar_Scale)).BeginInit();
             this.groupBox_Led.SuspendLayout();
             this.groupBox_DateTime.SuspendLayout();
+            this.groupBox_COM.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel_led
@@ -84,7 +92,7 @@
             // check_Blue
             // 
             this.check_Blue.BackgroundImage = global::pLED_customizer.Properties.Resources.blue;
-            this.check_Blue.Location = new System.Drawing.Point(175, 63);
+            this.check_Blue.Location = new System.Drawing.Point(173, 83);
             this.check_Blue.Name = "check_Blue";
             this.check_Blue.Size = new System.Drawing.Size(60, 17);
             this.check_Blue.TabIndex = 3;
@@ -94,7 +102,7 @@
             // check_Green
             // 
             this.check_Green.BackgroundImage = global::pLED_customizer.Properties.Resources.green;
-            this.check_Green.Location = new System.Drawing.Point(175, 40);
+            this.check_Green.Location = new System.Drawing.Point(173, 60);
             this.check_Green.Name = "check_Green";
             this.check_Green.Size = new System.Drawing.Size(60, 17);
             this.check_Green.TabIndex = 2;
@@ -104,7 +112,7 @@
             // check_Red
             // 
             this.check_Red.BackgroundImage = global::pLED_customizer.Properties.Resources.red;
-            this.check_Red.Location = new System.Drawing.Point(175, 17);
+            this.check_Red.Location = new System.Drawing.Point(173, 37);
             this.check_Red.Name = "check_Red";
             this.check_Red.Size = new System.Drawing.Size(60, 17);
             this.check_Red.TabIndex = 1;
@@ -113,7 +121,7 @@
             // 
             // button_data
             // 
-            this.button_data.Location = new System.Drawing.Point(94, 57);
+            this.button_data.Location = new System.Drawing.Point(92, 77);
             this.button_data.Name = "button_data";
             this.button_data.Size = new System.Drawing.Size(75, 23);
             this.button_data.TabIndex = 4;
@@ -123,7 +131,7 @@
             // 
             // button_Clear
             // 
-            this.button_Clear.Location = new System.Drawing.Point(11, 57);
+            this.button_Clear.Location = new System.Drawing.Point(9, 77);
             this.button_Clear.Name = "button_Clear";
             this.button_Clear.Size = new System.Drawing.Size(75, 23);
             this.button_Clear.TabIndex = 5;
@@ -140,7 +148,7 @@
             // textBox_RunText
             // 
             this.textBox_RunText.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.textBox_RunText.Location = new System.Drawing.Point(23, 52);
+            this.textBox_RunText.Location = new System.Drawing.Point(6, 28);
             this.textBox_RunText.MaxLength = 10;
             this.textBox_RunText.Name = "textBox_RunText";
             this.textBox_RunText.Size = new System.Drawing.Size(100, 20);
@@ -149,7 +157,7 @@
             // button_RunText
             // 
             this.button_RunText.Enabled = false;
-            this.button_RunText.Location = new System.Drawing.Point(150, 52);
+            this.button_RunText.Location = new System.Drawing.Point(138, 28);
             this.button_RunText.Name = "button_RunText";
             this.button_RunText.Size = new System.Drawing.Size(75, 23);
             this.button_RunText.TabIndex = 7;
@@ -160,14 +168,15 @@
             // comboBox_COM
             // 
             this.comboBox_COM.FormattingEnabled = true;
-            this.comboBox_COM.Location = new System.Drawing.Point(23, 118);
+            this.comboBox_COM.Location = new System.Drawing.Point(6, 80);
             this.comboBox_COM.Name = "comboBox_COM";
             this.comboBox_COM.Size = new System.Drawing.Size(100, 21);
             this.comboBox_COM.TabIndex = 8;
+            this.comboBox_COM.Click += new System.EventHandler(this.comboBox_COM_Click);
             // 
             // button_Connect
             // 
-            this.button_Connect.Location = new System.Drawing.Point(150, 118);
+            this.button_Connect.Location = new System.Drawing.Point(138, 78);
             this.button_Connect.Name = "button_Connect";
             this.button_Connect.Size = new System.Drawing.Size(75, 23);
             this.button_Connect.TabIndex = 9;
@@ -205,14 +214,16 @@
             // 
             // groupBox_Led
             // 
+            this.groupBox_Led.Controls.Add(this.button_Load);
+            this.groupBox_Led.Controls.Add(this.button_Save);
             this.groupBox_Led.Controls.Add(this.check_Blue);
             this.groupBox_Led.Controls.Add(this.check_Red);
             this.groupBox_Led.Controls.Add(this.check_Green);
             this.groupBox_Led.Controls.Add(this.button_data);
             this.groupBox_Led.Controls.Add(this.button_Clear);
-            this.groupBox_Led.Location = new System.Drawing.Point(12, 418);
+            this.groupBox_Led.Location = new System.Drawing.Point(12, 397);
             this.groupBox_Led.Name = "groupBox_Led";
-            this.groupBox_Led.Size = new System.Drawing.Size(241, 92);
+            this.groupBox_Led.Size = new System.Drawing.Size(241, 113);
             this.groupBox_Led.TabIndex = 13;
             this.groupBox_Led.TabStop = false;
             this.groupBox_Led.Text = "Led Data";
@@ -222,9 +233,9 @@
             this.groupBox_DateTime.Controls.Add(this.textBox_Date);
             this.groupBox_DateTime.Controls.Add(this.textBox_Time);
             this.groupBox_DateTime.Controls.Add(this.button_Update);
-            this.groupBox_DateTime.Location = new System.Drawing.Point(12, 267);
+            this.groupBox_DateTime.Location = new System.Drawing.Point(12, 182);
             this.groupBox_DateTime.Name = "groupBox_DateTime";
-            this.groupBox_DateTime.Size = new System.Drawing.Size(235, 107);
+            this.groupBox_DateTime.Size = new System.Drawing.Size(241, 107);
             this.groupBox_DateTime.TabIndex = 14;
             this.groupBox_DateTime.TabStop = false;
             this.groupBox_DateTime.Text = "Date Time Update";
@@ -235,18 +246,81 @@
             this.timer_sec.Interval = 1000;
             this.timer_sec.Tick += new System.EventHandler(this.timer_sec_Tick);
             // 
+            // groupBox_COM
+            // 
+            this.groupBox_COM.Controls.Add(this.button_Disconnect);
+            this.groupBox_COM.Controls.Add(this.label_COMstatus);
+            this.groupBox_COM.Controls.Add(this.textBox_RunText);
+            this.groupBox_COM.Controls.Add(this.comboBox_COM);
+            this.groupBox_COM.Controls.Add(this.button_RunText);
+            this.groupBox_COM.Controls.Add(this.button_Connect);
+            this.groupBox_COM.Location = new System.Drawing.Point(12, 12);
+            this.groupBox_COM.Name = "groupBox_COM";
+            this.groupBox_COM.Size = new System.Drawing.Size(241, 154);
+            this.groupBox_COM.TabIndex = 15;
+            this.groupBox_COM.TabStop = false;
+            this.groupBox_COM.Text = "COM Port";
+            // 
+            // label_COMstatus
+            // 
+            this.label_COMstatus.AutoSize = true;
+            this.label_COMstatus.Location = new System.Drawing.Point(7, 108);
+            this.label_COMstatus.Name = "label_COMstatus";
+            this.label_COMstatus.Size = new System.Drawing.Size(76, 13);
+            this.label_COMstatus.TabIndex = 10;
+            this.label_COMstatus.Text = "not connected";
+            // 
+            // button_Disconnect
+            // 
+            this.button_Disconnect.Location = new System.Drawing.Point(138, 108);
+            this.button_Disconnect.Name = "button_Disconnect";
+            this.button_Disconnect.Size = new System.Drawing.Size(75, 23);
+            this.button_Disconnect.TabIndex = 11;
+            this.button_Disconnect.Text = "Disconnect";
+            this.button_Disconnect.UseVisualStyleBackColor = true;
+            this.button_Disconnect.Click += new System.EventHandler(this.button_Disconnect_Click);
+            // 
+            // button_Save
+            // 
+            this.button_Save.Location = new System.Drawing.Point(9, 37);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(75, 23);
+            this.button_Save.TabIndex = 6;
+            this.button_Save.Text = "Save";
+            this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
+            // button_Load
+            // 
+            this.button_Load.Location = new System.Drawing.Point(92, 37);
+            this.button_Load.Name = "button_Load";
+            this.button_Load.Size = new System.Drawing.Size(75, 23);
+            this.button_Load.TabIndex = 7;
+            this.button_Load.Text = "Load";
+            this.button_Load.UseVisualStyleBackColor = true;
+            this.button_Load.Click += new System.EventHandler(this.button_Load_Click);
+            // 
+            // openFileDialog
+            // 
+            this.openFileDialog.DefaultExt = "pled";
+            this.openFileDialog.Filter = "data file (*.pled)|*.pled";
+            this.openFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog_FileOk);
+            // 
+            // saveFileDialog
+            // 
+            this.saveFileDialog.DefaultExt = "pled";
+            this.saveFileDialog.Filter = "data file (*.pled)|*.pled";
+            this.saveFileDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.saveFileDialog_FileOk);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(784, 522);
+            this.Controls.Add(this.groupBox_COM);
             this.Controls.Add(this.groupBox_DateTime);
             this.Controls.Add(this.groupBox_Led);
-            this.Controls.Add(this.button_Connect);
-            this.Controls.Add(this.comboBox_COM);
-            this.Controls.Add(this.button_RunText);
-            this.Controls.Add(this.textBox_RunText);
             this.Controls.Add(this.panel_led);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -262,8 +336,9 @@
             this.groupBox_Led.ResumeLayout(false);
             this.groupBox_DateTime.ResumeLayout(false);
             this.groupBox_DateTime.PerformLayout();
+            this.groupBox_COM.ResumeLayout(false);
+            this.groupBox_COM.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -287,6 +362,13 @@
         private System.Windows.Forms.GroupBox groupBox_Led;
         private System.Windows.Forms.GroupBox groupBox_DateTime;
         private System.Windows.Forms.Timer timer_sec;
+        private System.Windows.Forms.GroupBox groupBox_COM;
+        private System.Windows.Forms.Label label_COMstatus;
+        private System.Windows.Forms.Button button_Disconnect;
+        private System.Windows.Forms.Button button_Load;
+        private System.Windows.Forms.Button button_Save;
+        private System.Windows.Forms.OpenFileDialog openFileDialog;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog;
     }
 }
 
