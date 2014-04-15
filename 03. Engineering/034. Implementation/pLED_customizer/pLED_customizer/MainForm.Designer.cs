@@ -46,13 +46,13 @@
             this.textBox_Time = new System.Windows.Forms.TextBox();
             this.button_Update = new System.Windows.Forms.Button();
             this.groupBox_Led = new System.Windows.Forms.GroupBox();
+            this.button_Load = new System.Windows.Forms.Button();
+            this.button_Save = new System.Windows.Forms.Button();
             this.groupBox_DateTime = new System.Windows.Forms.GroupBox();
             this.timer_sec = new System.Windows.Forms.Timer(this.components);
             this.groupBox_COM = new System.Windows.Forms.GroupBox();
-            this.label_COMstatus = new System.Windows.Forms.Label();
             this.button_Disconnect = new System.Windows.Forms.Button();
-            this.button_Save = new System.Windows.Forms.Button();
-            this.button_Load = new System.Windows.Forms.Button();
+            this.label_COMstatus = new System.Windows.Forms.Label();
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.panel_led.SuspendLayout();
@@ -68,10 +68,10 @@
             this.panel_led.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel_led.Controls.Add(this.trackBar_Scale);
             this.panel_led.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.panel_led.Location = new System.Drawing.Point(259, 12);
+            this.panel_led.Location = new System.Drawing.Point(268, 12);
             this.panel_led.MinimumSize = new System.Drawing.Size(500, 500);
             this.panel_led.Name = "panel_led";
-            this.panel_led.Size = new System.Drawing.Size(513, 513);
+            this.panel_led.Size = new System.Drawing.Size(500, 500);
             this.panel_led.TabIndex = 0;
             this.panel_led.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_led_Paint);
             this.panel_led.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel_led_MouseDown);
@@ -228,6 +228,26 @@
             this.groupBox_Led.TabStop = false;
             this.groupBox_Led.Text = "Led Data";
             // 
+            // button_Load
+            // 
+            this.button_Load.Location = new System.Drawing.Point(92, 37);
+            this.button_Load.Name = "button_Load";
+            this.button_Load.Size = new System.Drawing.Size(75, 23);
+            this.button_Load.TabIndex = 7;
+            this.button_Load.Text = "Load";
+            this.button_Load.UseVisualStyleBackColor = true;
+            this.button_Load.Click += new System.EventHandler(this.button_Load_Click);
+            // 
+            // button_Save
+            // 
+            this.button_Save.Location = new System.Drawing.Point(9, 37);
+            this.button_Save.Name = "button_Save";
+            this.button_Save.Size = new System.Drawing.Size(75, 23);
+            this.button_Save.TabIndex = 6;
+            this.button_Save.Text = "Save";
+            this.button_Save.UseVisualStyleBackColor = true;
+            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
+            // 
             // groupBox_DateTime
             // 
             this.groupBox_DateTime.Controls.Add(this.textBox_Date);
@@ -261,15 +281,6 @@
             this.groupBox_COM.TabStop = false;
             this.groupBox_COM.Text = "COM Port";
             // 
-            // label_COMstatus
-            // 
-            this.label_COMstatus.AutoSize = true;
-            this.label_COMstatus.Location = new System.Drawing.Point(7, 108);
-            this.label_COMstatus.Name = "label_COMstatus";
-            this.label_COMstatus.Size = new System.Drawing.Size(76, 13);
-            this.label_COMstatus.TabIndex = 10;
-            this.label_COMstatus.Text = "not connected";
-            // 
             // button_Disconnect
             // 
             this.button_Disconnect.Location = new System.Drawing.Point(138, 108);
@@ -280,25 +291,14 @@
             this.button_Disconnect.UseVisualStyleBackColor = true;
             this.button_Disconnect.Click += new System.EventHandler(this.button_Disconnect_Click);
             // 
-            // button_Save
+            // label_COMstatus
             // 
-            this.button_Save.Location = new System.Drawing.Point(9, 37);
-            this.button_Save.Name = "button_Save";
-            this.button_Save.Size = new System.Drawing.Size(75, 23);
-            this.button_Save.TabIndex = 6;
-            this.button_Save.Text = "Save";
-            this.button_Save.UseVisualStyleBackColor = true;
-            this.button_Save.Click += new System.EventHandler(this.button_Save_Click);
-            // 
-            // button_Load
-            // 
-            this.button_Load.Location = new System.Drawing.Point(92, 37);
-            this.button_Load.Name = "button_Load";
-            this.button_Load.Size = new System.Drawing.Size(75, 23);
-            this.button_Load.TabIndex = 7;
-            this.button_Load.Text = "Load";
-            this.button_Load.UseVisualStyleBackColor = true;
-            this.button_Load.Click += new System.EventHandler(this.button_Load_Click);
+            this.label_COMstatus.AutoSize = true;
+            this.label_COMstatus.Location = new System.Drawing.Point(7, 108);
+            this.label_COMstatus.Name = "label_COMstatus";
+            this.label_COMstatus.Size = new System.Drawing.Size(76, 13);
+            this.label_COMstatus.TabIndex = 10;
+            this.label_COMstatus.Text = "not connected";
             // 
             // openFileDialog
             // 
@@ -317,14 +317,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(784, 522);
+            this.ClientSize = new System.Drawing.Size(780, 518);
             this.Controls.Add(this.groupBox_COM);
             this.Controls.Add(this.groupBox_DateTime);
             this.Controls.Add(this.groupBox_Led);
             this.Controls.Add(this.panel_led);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(800, 560);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

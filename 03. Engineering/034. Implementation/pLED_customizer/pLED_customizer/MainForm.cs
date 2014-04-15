@@ -187,7 +187,7 @@ namespace pLED_customizer
         private void MainForm_SizeChanged(object sender, EventArgs e)
         {
             Size sz = new Size();
-            sz.Height = this.Size.Height * 500 / 560;
+            sz.Height = this.Size.Height * 600 / 660;
             sz.Width = sz.Height;
             this.panel_led.Size = sz;
             Point pt = new Point();
@@ -198,7 +198,7 @@ namespace pLED_customizer
             led_size.Height = sz.Height / 50;
             led_size.Width = sz.Width / 50;
             pad = sz.Height / 100;
-            //hole = sz.Height * 6 / 500;
+            //hole = sz.Height * 6 / 600;
         }
 
         private void button_data_Click(object sender, EventArgs e)
