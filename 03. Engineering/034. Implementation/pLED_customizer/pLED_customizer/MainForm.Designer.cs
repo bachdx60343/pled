@@ -187,19 +187,19 @@
             // textBox_Date
             // 
             this.textBox_Date.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox_Date.Location = new System.Drawing.Point(18, 28);
+            this.textBox_Date.Location = new System.Drawing.Point(6, 28);
             this.textBox_Date.Name = "textBox_Date";
             this.textBox_Date.ReadOnly = true;
-            this.textBox_Date.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Date.Size = new System.Drawing.Size(112, 20);
             this.textBox_Date.TabIndex = 10;
             // 
             // textBox_Time
             // 
             this.textBox_Time.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.textBox_Time.Location = new System.Drawing.Point(18, 74);
+            this.textBox_Time.Location = new System.Drawing.Point(6, 74);
             this.textBox_Time.Name = "textBox_Time";
             this.textBox_Time.ReadOnly = true;
-            this.textBox_Time.Size = new System.Drawing.Size(100, 20);
+            this.textBox_Time.Size = new System.Drawing.Size(112, 20);
             this.textBox_Time.TabIndex = 11;
             // 
             // button_Update
