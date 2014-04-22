@@ -43,25 +43,29 @@ void  RB_isr(void)
    if(bit_test(changes, 2))
    {
       mode = MODE_A;
-      smode = 0;
+      smode = 1;
    }
    if(bit_test(changes, 3))
    {
       mode = MODE_B;
-      smode = 0;
+      smode = 1;
    }
    if(bit_test(changes, 4))
    {
       mode = MODE_C;
-      if (smode == 1)
-      	smode = 0;
-      else if (smode == 0)
+      if (smode == 0)
       	smode = 1;
+      else if (smode == 1)
+      	smode = 2;
+      else if (smode == 2)
+      	smode = 3;
+      else if (smode == 3)
+      	smode = 0;
    }
    if(bit_test(changes, 5))
    {
       mode = MODE_D;
-      smode = 0;
+      smode = 1;
       if (pled_direction == 1)
       	pled_direction = -1;
       else if (pled_direction == -1)
@@ -153,7 +157,7 @@ void var_init()
    last_b = port_b;
    tuning = 6;
    mode = MODE_A;
-   smode = 0;
+   smode = 1;
    tick = 1;
    digit_sec = 0;
    pled_position = 31;
@@ -255,7 +259,7 @@ void main()
 		if(circle_trigger == 1)
 		{  
 			circle_trigger = 0;
-			latch_ClearAll();
+			if ((smode % 2) == 1) latch_ClearAll();
 			digit_sec++;
 			section_trigger = 1;
 			section_count = MAX_SECTION;
@@ -268,7 +272,7 @@ void main()
 					section_trigger = 0;
 					fetch_data();
 					latch_write(rgb_bits.blue, rgb_bits.red, rgb_bits.green);
-					if (smode == 0 && section_count > 1) latch_ClearAll();
+					if ((smode % 2) == 1 && section_count > 1) latch_ClearAll();
 					section_count--;
 				}
 			}

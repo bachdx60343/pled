@@ -1,5 +1,5 @@
-004-005 @READ_PROGRAM_MEMORY8.P1
-004-005 @WRITE_PROGRAM_MEMORY8.P2
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
 015     CCP_1
 015     CCP_1_LOW
 016     CCP_1_HIGH
@@ -50,48 +50,48 @@
 04E     rs232_status
 04F-054 rgb_bits
 055     @TRIS_C
+056-059 @DIV3232.P1
+056     @PUTCHAR_BIU_1.P2
+056     @delay_ms1.P3
 056-057 latch_write.blue
-056     @delay_ms1.P1
-056-059 @DIV3232.P2
+056     ds1307_init.byte0
+056     fetch_data.pos
 056     ds1307_set_date_time.day
 056     latch_ClearAll.i
-056     fetch_data.pos
-056     ds1307_init.byte0
-056     @PUTCHAR_BIU_1.P1
 056     ds1307_get_date.@SCRATCH1
 056     ds1307_get_time.@SCRATCH1
 056     MAIN.@SCRATCH1
-057     ds1307_set_date_time.mth
 057     fetch_data.pcount
+057     ds1307_set_date_time.mth
 057     @PUTCHAR_BIU_1.@SCRATCH1
 057     MAIN.@SCRATCH2
-058     fetch_data.ycount
 058     ds1307_set_date_time.year
+058     fetch_data.ycount
 058-059 latch_write.red
-059     ds1307_set_date_time.dow
 059     fetch_data.year_position
-05A     @MUL88.P1
-05A     @I2C_READ_2.P2
-05A-05B latch_write.green
-05A     ds1307_set_date_time.hr
+059     ds1307_set_date_time.dow
 05A     @DIV88.P1
-05A-05D @DIV3232.P2
+05A-05B latch_write.green
+05A-05D @DIV3232.P1
+05A     @MUL88.P2
+05A     @I2C_READ_2.P3
+05A     ds1307_set_date_time.hr
 05A     fetch_data.@SCRATCH1
-05B     ds1307_set_date_time.min
 05B     bcd2bin.bcd_value
 05B     @MUL88.P1
-05B     @DIV88.P2
+05B     ds1307_set_date_time.min
+05B     @DIV88.P1
 05B     @I2C_READ_2.@SCRATCH1
+05C     latch_write.i
 05C     bcd2bin.temp
 05C     ds1307_set_date_time.sec
-05C     latch_write.i
 05C     @I2C_READ_2.@SCRATCH2
 05C     @DIV88.@SCRATCH1
 05D     bin2bcd.bin_value
 05D     ds1307_set_date_time.@SCRATCH1
 05D     bcd2bin.@SCRATCH1
-05E     @I2C_WRITE_2.P1
 05E-061 bin2bcd.dabble
+05E     @I2C_WRITE_2.P1
 05E     @DIV3232.@SCRATCH1
 05F     @DIV3232.@SCRATCH2
 060     @DIV3232.@SCRATCH3
@@ -178,47 +178,51 @@ ROM Allocation:
 000251  pled_inward.data
 00026F  year_2014.call
 000273  year_2014.data
-000291  EXT_isr
-000298  RB_isr
-0002D3  RDA_isr
-00033D  TIMER1_isr
-000342  CCP1_isr
-000357  @MUL3232
-0003B1  TIMER0_isr
-0003B7  var_init
-0003D2  @I2C_WRITE_2
-00042E  @I2C_READ_2
-000482  ds1307_init
-00058C  bcd2bin
-0005A0  @DIV88
-0005B5  @MUL88
-0005DA  bin2bcd
-00069C  ds1307_set_date_time
-000716  @PUTCHAR_BIU_1
-00072E  @delay_ms1
-000742  @DIV3232
-000800  fetch_data
-001000  MAIN
+000291  flappy1.call
+00029A  flappy1.data
+000402  flappy2.call
+00040B  flappy2.data
+000573  EXT_isr
+00057A  RB_isr
+0005C6  RDA_isr
+000630  TIMER1_isr
+000635  CCP1_isr
+00064A  @MUL3232
+0006A4  TIMER0_isr
+0006AA  var_init
+0006C6  @I2C_WRITE_2
+000722  @I2C_READ_2
+000776  bcd2bin
+00078A  @DIV88
+00079F  @MUL88
+0007C4  @PUTCHAR_BIU_1
+0007DC  @delay_ms1
+000800  ds1307_init
+00091E  bin2bcd
+0009E0  ds1307_set_date_time
+000A6C  @DIV3232
+000ABD  fetch_data
 001000  @cinit1
+001000  MAIN
 001020  @cinit2
-0013F3  ds1307_get_date
-0014C2  ds1307_get_time
-001610  latch_write
-001692  latch_ClearAll
+0013F7  ds1307_get_date
+0014C6  ds1307_get_time
+00161B  latch_write
+00169F  latch_ClearAll
 
 Project Directory:
     C:\Users\LongNT\SVN\03. Engineering\034. Implementation\pLED_code\
 
 Project Files:
-    pLED.c                                                  [14-Apr-14 19:56  CRC=E0C70B3A]
-    pLED.h                                                  [14-Apr-14 19:38  CRC=C9495B7B]
+    pLED.c                                                  [22-Apr-14 12:49  CRC=CFCDB387]
+    pLED.h                                                  [22-Apr-14 12:48  CRC=AA8812CB]
     ..\..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [12-Nov-13 14:35  CRC=6CB1A611]
     24256.c                                                 [25-Mar-14 00:31  CRC=B3A819A6]
     74595.c                                                 [14-Apr-14 18:00  CRC=F36995F9]
     ds1307.c                                                [14-Apr-14 15:14  CRC=D8B7D5CB]
-    data.c                                                  [14-Apr-14 19:54  CRC=5E5385D6]
+    data.c                                                  [22-Apr-14 12:48  CRC=C5B98447]
 
-Source signature=53329DDC
+Source signature=F243FA5B
 
 Units:
     pLED (main)

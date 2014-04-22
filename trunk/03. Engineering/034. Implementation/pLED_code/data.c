@@ -2,19 +2,19 @@
 //   pLED - Capstone Project                                                 ||
 //   FPT University - Spring 2014                                            ||
 //                                                                           ||
-// 		Function for fetching the data to rgb_bits structure                ||
+// 		Function for fetching the data to rgb_bits structure                 ||
 //                                                                           ||
 //   Last edited: 13 - April - 2014                                          ||
 //                                                                           ||
 //   void fetch_data() - depend on chosen mode, the board position and timing||
 //                       fetch appropriate data to rgb_bits structure        ||
-//																									  ||
+// 																		 ||
 //   There are four modes:                                                   ||
-//					- MODE_A: data for analog clock                               ||
-//					- MODE_B: data for digital clock                              ||
-//					- MODE_C: data for an image, FPT logo                         ||
-//					- MODE_D: data for running letters, pLED                      ||
-//																									  ||
+//					- MODE_A: data for analog clock                          ||
+//					- MODE_B: data for digital clock                         ||
+//					- MODE_C: data for an image, FPT logo                    ||
+//					- MODE_D: data for running letters, pLED                 ||
+//																			 ||
 //===========================================================================||
 
 void fetch_data()
@@ -60,13 +60,35 @@ void fetch_data()
 	else if(mode == MODE_C) // display an image - FPT logo
 	{
 		//the image data, which store information for entire circle, is an array
-		if (section_count == 16)
+		if (smode == 1 && section_count == 16)
 		{
 		  section_count--;
 		}
-		rgb_bits.blue = fpt[section_count * 3 - 3];
-		rgb_bits.red = fpt[section_count * 3 - 2];
-		rgb_bits.green = fpt[section_count * 3 - 1];
+		if (smode < 2)
+		{
+			rgb_bits.blue = fpt[section_count * 3 - 3];
+			rgb_bits.red = fpt[section_count * 3 - 2];
+			rgb_bits.green = fpt[section_count * 3 - 1];
+		}
+
+		if (smode > 1)
+		{
+			if (section_count == 3) section_count--;
+			if(pled_count < 360)
+			{
+				rgb_bits.blue = flappy1[section_count * 3 - 3];
+				rgb_bits.red = flappy1[section_count * 3 - 2];
+				rgb_bits.green = flappy1[section_count * 3 - 1];
+			}
+			else
+			{
+				rgb_bits.blue = flappy2[section_count * 3 - 3];
+				rgb_bits.red = flappy2[section_count * 3 - 2];
+				rgb_bits.green = flappy2[section_count * 3 - 1];
+			}
+			pled_count++;
+			if (pled_count > 720) pled_count = 0;
+		}
 	}
 	else if(mode == MODE_B) // display digital clock with format hour-minute, day-month
 	{
