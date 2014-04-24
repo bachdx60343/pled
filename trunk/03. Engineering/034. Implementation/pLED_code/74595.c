@@ -30,6 +30,7 @@ void latch_write(int16 blue, int16 red, int16 green)
   	
 	for(i = 16; i > 0; i--)
 	{
+		if (circle_trigger == 1) break;
 		//write green led first, the first bit output will be on the last latch
 		if(green & 0x01)
 			output_high(EXP_OUT_DO);

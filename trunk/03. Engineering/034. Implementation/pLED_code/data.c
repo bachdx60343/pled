@@ -2,19 +2,19 @@
 //   pLED - Capstone Project                                                 ||
 //   FPT University - Spring 2014                                            ||
 //                                                                           ||
-// 		Function for fetching the data to rgb_bits structure                 ||
+// 		Function for fetching the data to rgb_bits structure                ||
 //                                                                           ||
-//   Last edited: 13 - April - 2014                                          ||
+//   Last edited: 23 - April - 2014                                          ||
 //                                                                           ||
 //   void fetch_data() - depend on chosen mode, the board position and timing||
 //                       fetch appropriate data to rgb_bits structure        ||
-// 																		 ||
+// 																		                    ||
 //   There are four modes:                                                   ||
-//					- MODE_A: data for analog clock                          ||
-//					- MODE_B: data for digital clock                         ||
-//					- MODE_C: data for an image, FPT logo                    ||
-//					- MODE_D: data for running letters, pLED                 ||
-//																			 ||
+//					- MODE_A: data for analog clock                               ||
+//					- MODE_B: data for digital clock                              ||
+//					- MODE_C: data for an image, FPT logo                         ||
+//					- MODE_D: data for running letters, pLED                      ||
+//																			                    ||
 //===========================================================================||
 
 void fetch_data()
@@ -28,7 +28,7 @@ void fetch_data()
 		rgb_bits.blue =  0x0001;
 		rgb_bits.red =   0x0001;
 		rgb_bits.green = 0x0001;
-		// leds' value for hour mark on analog clock
+		// leds' value for 1-12 hour
 		if((section_count % 5) == 0)
 		{
 			rgb_bits.blue =  0x0003;
@@ -57,40 +57,40 @@ void fetch_data()
 			rgb_bits.green = 0xFFF1;
 		}
 	}
-	else if(mode == MODE_C) // display an image - FPT logo
+	else if(mode == MODE_C) // display an image
 	{
-		//the image data, which store information for entire circle, is an array
-		if (smode == 1 && section_count == 16)
-		{
-		  section_count--;
-		}
+		//the image data, which stores information for entire frame, is an array
+		//display FPT logo if smode is 0 or 1
 		if (smode < 2)
 		{
-			rgb_bits.blue = fpt[section_count * 3 - 3];
-			rgb_bits.red = fpt[section_count * 3 - 2];
-			rgb_bits.green = fpt[section_count * 3 - 1];
+			rgb_bits.blue = fpt_blue[section_count - 1];
+			rgb_bits.red = fpt_red[section_count - 1];
+			rgb_bits.green = fpt_green[section_count - 1];
 		}
-
+		//display flappy bird data if smode is 2 or 3
+		//flappy birs data has two different array and is changed repeatedly
+		//to create an animation
 		if (smode > 1)
 		{
-			if (section_count == 3) section_count--;
-			if(pled_count < 360)
+			//flappy data is changed each 6 frame, about 200ms
+			if (pled_count < 480)
 			{
-				rgb_bits.blue = flappy1[section_count * 3 - 3];
-				rgb_bits.red = flappy1[section_count * 3 - 2];
-				rgb_bits.green = flappy1[section_count * 3 - 1];
+				rgb_bits.blue = flappy1_blue[section_count-1];
+				rgb_bits.red = flappy1_red[section_count-1];
+				rgb_bits.green = flappy1_green[section_count-1];
 			}
 			else
 			{
-				rgb_bits.blue = flappy2[section_count * 3 - 3];
-				rgb_bits.red = flappy2[section_count * 3 - 2];
-				rgb_bits.green = flappy2[section_count * 3 - 1];
+				rgb_bits.blue = flappy2_blue[section_count-1];
+				rgb_bits.red = flappy2_red[section_count-1];
+				rgb_bits.green = flappy2_green[section_count-1];
 			}
 			pled_count++;
-			if (pled_count > 720) pled_count = 0;
+			if (pled_count > 960) pled_count = 0;
 		}
 	}
-	else if(mode == MODE_B) // display digital clock with format hour-minute, day-month
+	// display digital clock with format hour-minute/day-month
+	else if(mode == MODE_B)
 	{
 		rgb_bits.red = 0x8000;
 		switch (section_count)
@@ -202,25 +202,23 @@ void fetch_data()
 	}
 	else if (mode == MODE_D) // display running letters
 	{ 	
+		//default value
 		rgb_bits.blue = 0x0000;
 		rgb_bits.red = 0x0000;
 		rgb_bits.green = 0x0000;
-	  	
+		//pcount is used for "pled_inward" array index
+		//value of pcount is calculated base on NODE position and pled_position
 		int8 pcount, ycount, year_position;
 		pcount = section_count - pled_position + 14;
 		if (pled_position < 31 ) year_position = pled_position + 30;
 		else year_position = pled_position - 30;
 		ycount = section_count - year_position + 14;
-		if (pcount >= 60)
-		{
-			pcount = pcount - 60;
-		}
-		if (ycount >= 60)
-		{
-			ycount = ycount - 60;
-		}
+		//adjust pcount if its value out of 1-60 range
+		if (pcount >= 60)	pcount = pcount - 60;
+		if (ycount >= 60)	ycount = ycount - 60;
 		if (pcount >=0 && pcount < 15)
 		{
+			//each letter has different color
 			if(pcount > 11) rgb_bits.blue = pled_inward[pcount];
 			else if(pcount > 7) rgb_bits.red = pled_inward[pcount];
 			else if(pcount > 3) rgb_bits.green = pled_inward[pcount];
@@ -248,6 +246,7 @@ void fetch_data()
 	  	
 		//change text's position
 		pled_count++;
+		//text position is changed each 2 frames
 		if (pled_count > 120)
 		{
 			pled_count = 0;
