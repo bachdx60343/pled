@@ -4,7 +4,7 @@
 //                                                                           ||
 // 		Main function, framework for the program                            ||
 //                                                                           ||
-//   Last edited: 13 - April - 2014                                          ||
+//   Last edited: 23 - April - 2014                                          ||
 //                                                                           ||
 //   void var_init() - Initialize global variables' values                   ||
 //   void main() - main program, called when the Microcontroller start       ||
@@ -29,6 +29,8 @@
 
 #INT_EXT
 void EXT_isr(){
+	//each SQW/OUT of DS1307 will trigger this isr
+	//with 1Hz frequency
 	tick += 1;
 	sec++;
 }
@@ -38,6 +40,7 @@ void  RB_isr(void)
 {
    BYTE changes;
    port_b = input_b();
+   //compare status of port B with previous value
    changes = last_b ^ port_b;
    last_b = port_b;
    if(bit_test(changes, 2))
@@ -53,25 +56,25 @@ void  RB_isr(void)
    if(bit_test(changes, 4))
    {
       mode = MODE_C;
-      if (smode == 0)
-      	smode = 1;
-      else if (smode == 1)
-      	smode = 2;
-      else if (smode == 2)
-      	smode = 3;
-      else if (smode == 3)
-      	smode = 0;
+      //change value of smode in range of 0-3
+      if (smode == 0) smode = 1;
+      else if (smode == 1) smode = 2;
+      else if (smode == 2) smode = 3;
+      else if (smode == 3) smode = 0;
    }
    if(bit_test(changes, 5))
    {
       mode = MODE_D;
       smode = 1;
-      if (pled_direction == 1)
-      	pled_direction = -1;
-      else if (pled_direction == -1)
+      //change direction of text: clockwise, anti-clockwise, still
+      if (pled_status == 0) pled_status = 1;
+      else if (pled_status == 1) pled_status = 2;
+      else if (pled_status == 2) pled_status = 3;
+      else if (pled_status == 3) pled_status = 0;
+      if (pled_status == 0 || pled_status == 2)
       	pled_direction = 0;
-      else if (pled_direction == 0)
-      	pled_direction = 1;
+      else if (pled_status == 1) pled_direction = 1;
+      else if (pled_status == 3) pled_direction = -1;
    }
 }
 
@@ -79,6 +82,10 @@ void  RB_isr(void)
 void  RDA_isr(void) 
 {
    rc = getc();
+   //"ST" characters signal to start receive date, time data
+   //"ED" to end transmission
+   //after each byte, rs232_status changes its value
+   //transmission is valid only when rs232_status reach 11
    switch (rs232_status)
    {
    	case 0:
@@ -136,15 +143,18 @@ void  TIMER1_isr(void)
 #INT_CCP1
 void  CCP1_isr(void) 
 {
+	//calculate the duration between two consecutive Hall signals
    sigHall_timer = ((int32)timer1_overflow * 0xFFFF + CCP_1);
    timer1_overflow = 0;
    set_timer1(0);
+   //set trigger for start revolution
    circle_trigger = 1;
 }
 
 #INT_TIMER0
 void  TIMER0_isr(void) 
 {
+	//set trigger for each NODE
    section_trigger = 1;
 }
 
@@ -162,6 +172,7 @@ void var_init()
    digit_sec = 0;
    pled_position = 31;
    pled_direction = 1;
+   pled_status = 0;
    pled_count = 0;
    rs232_status = 0;
 }
@@ -177,8 +188,6 @@ void main()
    setup_timer_0(T0_INTERNAL | T0_DIV_16); //div 16 - 819.2 us overflow
    //enable interrupts
    enable_interrupts(INT_RB2|INT_RB3|INT_RB4|INT_RB5);;
-   //enable_interrupts(INT_TBE);
-   //enable_interrupts(INT_RDA);
    enable_interrupts(INT_EXT);
    enable_interrupts(INT_TIMER1);
    enable_interrupts(INT_CCP1);
@@ -188,7 +197,7 @@ void main()
 	//initialize clock
    ds1307_init();
   	
-	// power on notice
+	//test power on
 	rgb_bits.blue =  0xF00F;
 	rgb_bits.red =   0x0F0F;
 	rgb_bits.green = 0x00FF;
@@ -217,6 +226,7 @@ void main()
    	// rs232 operation
    	if (rs232_status == 11)
    	{
+   		//notify the RS232 transmission for date, time update is successful
    		latch_write(0x0000, 0x0FF0, 0x0000);
    		rs232_status = 0;
    	   ds1307_set_date_time(day, month, year, dow, hour, min, sec);
@@ -270,8 +280,11 @@ void main()
 				{
 					set_timer0(section_timer);
 					section_trigger = 0;
+					//data calculation
 					fetch_data();
+					//shifting data
 					latch_write(rgb_bits.blue, rgb_bits.red, rgb_bits.green);
+					//smode change between continuous display and discrete display
 					if ((smode % 2) == 1 && section_count > 1) latch_ClearAll();
 					section_count--;
 				}
