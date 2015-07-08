@@ -1,0 +1,1 @@
+A motor spins the "propeller", and a small microprocessor keeps track of time and changes the pattern on seven LEDs with exact timing to simulate a 7 by 30 array of LEDs. It is an illusion, but it works nicely.
